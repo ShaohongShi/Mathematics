@@ -1,0 +1,34 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+    ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+    p{margin:1px;padding:0;}
+    html {font-size: 28px;}</style>
+<title>Statics-Statics Model</title>
+</head><body>
+    <a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+    <a href="ProbabilitySpace.html">Probability Space</a>
+    <a href="NumericalCharacteristics.html">Numerical Characteristics</a>
+    <a href="DiscreteDistribution.html">Discrete Distribution</a>
+    <a href="ContinuousDistribution.html">Continuous Distribution</a>
+    <a href="StaticsModel.html">Statics Model</a>
+<h2>MLE</h2>
+The method of maximum likelihood is based on the likelihood function, $\mathcal {L}(\theta ;x)$. We are given a statistical model, i.e. a family of distributions $\{f(\cdot \,;\theta )\mid \theta \in \Theta \}$, where $\theta$  denotes the (possibly multi-dimensional) parameter for the model. The method of maximum likelihood finds the values of the model parameter, $\theta$, that maximize the likelihood function $\mathcal {L}(\theta ;x)$. 
+    $\hat{\Theta}=\{ \mathrm{argmax}_{\theta \in \Theta} \mathcal{L}(\theta;x)\}$ if a maximum exists.
+<h2>Statistical hypothesis test</h2>
+Commonly, two statistical data sets are compared, or a data set obtained by sampling is compared against a synthetic data set from an idealized model. A hypothesis is proposed for the statistical relationship between the two data sets, and this is compared as an alternative to an idealized null hypothesis that proposes no relationship between two data sets. The comparison is deemed statistically significant if the relationship between the data sets would be an unlikely realization of the null hypothesis according to a threshold probability—the significance level
+<h2>operating characteristic curve</h2>
+$L(p)$ is the probability of recieving the products when the rate of spoiled products is $p$. When $p \le p_0, L(p) \ge 1-\alpha$, when $ p > p_1, L(p) \le \beta$.
+<h2>Order statistic</h2>
+<ul>
+    <li>Maximum: $M=\max\{x_1,\cdots,x_n\},F_M(x)=[F_0(x)]^n$.</li>
+    <li>Minimum: $m=\max\{x_1,\cdots,x_n\},F_m(x)=1-[1-F_0(x)]^n$.</li>
+    <li>$(m,M): f(x,y)=n(n-1)[F_0(y)-F_0(x)]^{n-2}f_0(x)f_0(y)(x < y)$.</li>
+    <li>$(X_k^*,X_l^*) \quad k < l, \text{use }\Delta x,\Delta y$ to get polynomial distribution.</li>
+</ul>
+</body></html>

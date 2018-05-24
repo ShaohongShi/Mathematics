@@ -1,0 +1,72 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$']]},messageStyle: "none"});</script>
+<style> 
+    ol {margin-top: 5px; margin-bottom:5px; margin-left:42px; padding:0px;}
+    ul{margin-top: 5px; margin-bottom:5px; margin-left:38px; padding:0px;}
+    p{margin:1px;padding:0;}
+    h2{margin-top:8px; margin-bottom:8px; padding:0px;}
+    html {font-size: 40px;}</style>
+<title>Differential-Real-Value Function</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="NumericalSequence.html">Numerical Sequence</a>
+	<a href="Real-valueFunction.html">Real-Value Function</a>
+    <a href="DifferentialTheorems.html">Differential Theorems</a>
+    <a href="Application.html">Applicatioon</a>
+<h2>Continuous</h2>
+<ol>
+	<li>One-sided limit<ul>
+		<li>$f(x-)=\lim\limits_{x \to x_0^-}f(x), f(x+)=\lim\limits_{x \to x_0^+}f(x)$</li>
+		<li>Continuous: $f(x)=f(x-)=f(x+)$</li>
+		<li>Removable discontinuty: $f(x-) \ne f(x+)$.</li> 
+		<li>Second kind: at least one limit does not exist.</li>
+	</ul></li>
+	<li>Composite Operation<ul>
+	<li>$\lim\limits_{x\to a}f(g(x))=c, \lim\limits_{y \to b} f(y) = c, \lim\limits_{x\to a}g(x)=b$.</li>
+	<li>$f(b) = c$ or $g$ does not take the value $b$ near $a$.</li></ul></li>
+	<li>Image Theorem: The image of a continuous real value function on a closed interval is closed interval.</li>
+	<li>Asmptotic: $f,g,\gamma$ is defined on $U_0(x_0),x_0$ can be $\infty$,$\pm \infty, \lim\limits_{x \to x_0}g(x)=0, f=\gamma g$, then when $x \to x_0$,<ul>
+		<li>$f=o(g)$ if $\lim\limits_{x \to x_0}\gamma (x)=0$.</li>
+		<li>$f = O(g)$ if $\gamma(x)$ is bounded on some deleted neighborhood.</li>
+		<li>$f(x) \sim g(x)$ if $\lim\limits_{x \to x_0} \gamma(x) = 1$.</li></ul></li>
+	<li>Limit calculus<ul>
+		<li>$\lim\limits_{x \to 0}\dfrac{\sin x}{x}=1, \lim\limits_{x\to \infty}(1+\dfrac{1}{x})^{x}=\mathrm{e}, \lim\limits_{x \to 0}\dfrac{\ln{(1+x)}}{x}=1$.</li>
+		<li>$\lim\limits_{x \to 0}{\dfrac{a^x-1}{x}}=\ln a (a>0), \lim\limits_{x\to 0}\dfrac{(1+x)^\mu}{x}=\mu$.</li>
+		<li>$\ln x << x^\varepsilon << a^x<< x^x, a>1, \varepsilon>0, x \to 0$</li></ul></li>
+	<li>Monotomic function<ul>
+		<li>The discontinuities of a monotonic function can be only the first kind and at most countable.</li>
+		<li>$f \colon X \to \mathbb{R}$ that is strictly monotonic on $X \subset \mathbb{R}$ has an inverse $f^{-1} \colon f(X) \to X$ with the same type of monotonicity.</li>
+		<li>$f$ is continuous on $[a,b]$, differential on $(a,b)$, then $f$ is increasing(resp. decreasing) iff $f^{\prime} \ge 0$(resp. $f^{\prime} \le 0$).</li>
+		<li>This is not for a point, e.g., $f(x)=\begin{cases} x+2x^2 \sin{\dfrac{1}{x}} & x \ne 0 \\ 0 & x=0 \end{cases}$.</li></ul></li>
+	</ol>
+<h2>Differention</h2>
+$\boldsymbol{f} \colon E \to \mathbb{R}^n$ is differentiable at $\boldsymbol{x}, E \subset \mathbb{R}^m, \boldsymbol{x}$ is a limit point of $E$, $f(\boldsymbol{x}+\boldsymbol{h})-f(\boldsymbol{x})=L(\boldsymbol{x})\boldsymbol{h}+\alpha (\boldsymbol{x};\boldsymbol{h}), L(\boldsymbol{x}) \colon \mathbb{R}^m \to \mathbb{R}^n$
+<ul>
+	<li>$\alpha(x;h)=o(h)$ as $h \to 0,x+h \in E$.</li>
+	<li>$\boldsymbol{f}$ is differentiable at $\boldsymbol{x}_0$ iff. the coordinate functions are differentiable at $\boldsymbol{x}_0$.</li>
+	<li>Jacobi: $f^{\prime}(x_0) =\boldsymbol{J}={\begin{bmatrix}{\dfrac {\partial f_{1}}{\partial x_{1}}}&\cdots &{\dfrac {\partial f_{1}}{\partial x_{n}}}\\\vdots &\ddots &\vdots \\{\dfrac {\partial f_{m}}{\partial x_{1}}}&\cdots &{\dfrac {\partial f_{m}}{\partial x_{n}}}\end{bmatrix}} \in \mathscr{L}(T\mathbb{R}_{x_0}^m, T\mathbb{R}_{f(x_0)}^n)$</li>
+	<li>$\dfrac{\partial f^i}{\partial x^j} \triangleq \lim\limits_{h^j \to 0}\dfrac{f^i(\cdots,x^j,\cdots)-f^j(\cdots,x^j+h^j,\cdots)}{h^j}$.</li>
+	<li>$f : X \to \mathbb{R}, g : X \to \mathbb{R}$ are differentiable at $x \in X \subset \mathbb{R}^m, (f+g)^{\prime}=f^{\prime}+g^{\prime}, (f \cdot g)^{\prime}=f^{\prime}\cdot g+f \cdot g^{\prime}, \left(\dfrac{f}{g}\right)^{\prime}=\dfrac{f^{\prime}g-fg^{\prime}}{g^2}$</li>
+</ul>
+<h2>Partial Derivative</h2>
+<ul>
+	<li>$f \colon U(x) \to \mathbb{R}$ on $U(x) \subset \mathbb{R}^m$ of $x=(x^1, ... ,x^m)$ has all partial derivatives $\dfrac{\partial f}{\partial x^1}, \cdots, \dfrac{\partial f}{\partial x^m}$ on $U(x)$ and they are continuous at $x$, then $f$ is differentiable at $x$.</li>
+	<li>$f(x,y)=\begin{cases}(x^2+y^2)\sin \dfrac{1}{\sqrt{x^2+y^2}} & x^2+y^2 \ne 0 \\ \quad\quad 0 & x^2+y^2=0 \end{cases}$</li>
+	<li>If $f:G \to \mathbb{R}$ has partial derivatives $\dfrac{\partial f}{\partial x^i \partial x^j}$, $\dfrac{\partial f}{\partial x^j \partial x^i}$ in a domain $G$, then at every point $x \in G$ at which both partial derivatives are continuous, their values are the same.</li>
+</ul>
+<h2>Derivative</h2>
+<ul>
+	<li>$(C)^{\prime}=0, {(x^{\alpha})}^{\prime}=\alpha x^{\alpha-1}$.</li>
+	<li>$(a^x)^{\prime}=a^x \ln a, (\log_a x)^{\prime}=\dfrac{1}{x \ln a}$.</li>
+	<li>$(\sin x)^{\prime}=\cos x, (\sinh x)^{\prime}=\cosh x$.</li>
+	<li>$(\cos x)^{\prime}=-\sin x, (\cosh x)^{\prime}=\sinh x$.</li>
+	<li>$(\tan x)^{\prime}=\dfrac{1}{\cos ^2 x}, (\tanh x)^{\prime}=\dfrac{1}{\cosh ^2 x}$.</li>
+	<li>$(\cot x)^{\prime}=-\dfrac{1}{\sin ^2 x}, (\coth x)^{\prime}=-\dfrac{1}{\sinh ^2 x}$.</li>
+	<li>$(\arcsin x)^{\prime}=\dfrac{1}{\sqrt{1-x^2}}, (\arccos x)^{\prime}=-\dfrac{1}{\sqrt{1-x^2}}$.</li>
+	<li>$(\arctan x)^{\prime}=\dfrac{1}{1+x^2}, (\mathrm{arccot} x)^{\prime}=-\dfrac{1}{1+x^2}$.</li>
+	<li>$(\mathrm{arcsinh}x)^{\prime}=(\ln{(x+\sqrt{x^2+1}})^{\prime}=\dfrac{1}{\sqrt{x^2+1}}$.</li>
+	<li>$(\mathrm{arccosh}x)^{\prime}=(\ln{(x\pm\sqrt{x^2-1}})^{\prime}=\pm\dfrac{1}{\sqrt{x^2-1}}$.</li>
+	<li>$(\mathrm{arctanh}x)^{\prime}=\left(\dfrac{1}{2}\ln{\dfrac{1+x}{1-x}}\right)^{\prime}=\dfrac{1}{\sqrt{1-x^2}}$.</li>
+	<li>$(\mathrm{arccoth}x)^{\prime}=\left(\dfrac{1}{2} \ln{-\dfrac{1+x}{1-x}}\right)^{\prime}=-\dfrac{1}{\sqrt{1-x^2}}$.</li>
+</ul>

@@ -1,0 +1,65 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$']]},messageStyle: "none"});</script>
+<style> 
+    ol {margin-top: 5px; margin-bottom:5px; margin-left:42px; padding:0px;}
+    ul{margin-top: 5px; margin-bottom:5px; margin-left:38px; padding:0px;}
+    p{margin:1px;padding:0;}
+    h2{margin-top:8px; margin-bottom:8px; padding:0px;}
+    html {font-size: 40px;}</style>
+<title>Differential-Application</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="NumericalSequence.html">Numerical Sequence</a>
+	<a href="Real-valueFunction.html">Real-Value Function</a>
+    <a href="DifferentialTheorems.html">Differential Theorems</a>
+    <a href="Application.html">Applicatioon</a>
+<h2>Local Extremum</h2>
+Fermat
+<ul>
+	<li>A point $x_0 \in E \subset \mathbb{R}^m$ is called a local maximum (minimum) point and the value of a function $f : E \to \mathbb{R}$ at that point a local maximum (minimum) value if there exists a neighborhod $U(X_0) \in E$ such that at any point $x \in U(x_0)$ we have $f(x) \le f(x_0)$ (resp. $f(x) \ge f(x_0 )$).</li>
+	<li>Fermat: If a function $f : E \to \mathbb{R}, E \subset \mathbb{R}$ is differentiable at an interior extremum, $x_0 \in E$, then $f^{\prime}(x_0) = 0$.</li>
+	<li>$x_0$ is a interior extreme of $f : U(x_0) \to \mathbb{R} \Rightarrow$ $(f$ is not differentiable$)\ \lor (f^{\prime}(x_0)=0)$.</li>
+</ul>
+Multivariable
+<ul>
+	<li>(stationary point)If $f$ has a local extremum at $x_0$ and has partial differentives w.r.t, each variable, then $\dfrac{\partial f}{\partial x^1}(x_0)=\cdots=\dfrac{\partial f}{\partial x^m}(x_0)=0$.</li>
+	<li>$f:U(x_0) \to \mathbb{R} \in C^2(U(x_0) \subset \mathbb{R}^m)$ and let $x_0$ be a critical point of $f$, if $\left[\dfrac{\partial ^2 f}{\partial x^i \partial y^j} \right]$.</li>
+	<p><span style="background-color:lightgray;">is positive(resp. negative)-definite, then $x_0$ has a local minimum(resp. maximum) at $x_0$;</span></p>
+	<p><span style="background-color:lightgray;">assumes both positive and negative values, then the function does not have an extremum at $x_0$.</span></p>
+</ul>
+Lemma
+<ul>
+	<li>The critical point $x_0$ of $f \in C^2(U;\mathbb{R})$ is nondegenerate if the Hessian of $f$ at $x_0$, i.e. $\det{[\dfrac{\partial^2 f}{\partial x^i \partial x^j}(x_0)]}$.</li>
+	<li>Hadamard's lemma: Let $f \in C^{(p)} (U;\mathbb{R}), p > 1$, defined in a convex neighborhood $U$ of the point $0 = (0, ...,0)\in \mathbb{R}^m$ and $f(0) = 0$. Then there exist functions $g^i \in C^{(p-1)} (U;\mathbb{R})$, such that the equality $f(x^1,\cdots,x^m)=\sum\limits_{i=1}^m x^i g_i(x^1, \cdots, x^m)$ holds in $U$, and $g_i(0)=\dfrac{\partial f}{\partial x^i}(0)$.</li>
+	<li>Morse's lemma: If $f : G \to \mathbb{R} \in C^{(3)}(G; \mathbb{R})$ defined on an open set $G \subset \mathbb{R}^m$ and $x_0 \in G$ is a nondegenerate critical point of that function, then there exists a diffeomorphism $g : V \to U$ of some neighborhood of the origin $0$ in $\mathbb{R}^m$ onto a neighborhood $U(x_0)$ such that $(f \circ g)(y)-f(x_0)=-(y^1)^2-\cdots-(y^k)^2+(y^{k+1})^2+\cdots+(y^m)^2$ for all $y \in V$.</li>
+</ul>
+Extrema with Constraint
+<ul>
+	<li>Finding an extremum for a real-valued function $y = f(x^1, \cdots,x^n)$ under the condition $\begin{cases}F^1(x^1,\cdots,x^n)=0 \\ \cdots\cdots\cdots \\ F^m(x^1, \cdots, x^n)=0 \end{cases}\in C^{(1)}$.</li>
+	<li>If the rank of $F^1 , \cdots , F^m$ is $n-k$, we are considering the restriction $f_{|S}$ of the function $f$ to the surface $S$ and seeking an extremum of that function.</li>
+	<li>Let $f : D \to \mathbb{R} \in C^{(1)}(D;\mathbb{R})$ be a function defined on an open set $D \subset \mathbb{R}^n$. Let $S$ be a smooth surface in $D$ and $N = \{x \in D | f(x) = f(x_0)\}$. A necessary condition for $x_0 \in S$ that is noncritical for $f$ to be a local extremum of $f$ is that $TS_{x_0} \subset TN_{x_0}$.</li>
+	<li>That is $\mathrm{grad}f(x_0)=\sum\limits_{i=1}^m \lambda_i \mathrm{grad}F^i(x_0)$. then we have Lagrange function $L(x,\lambda)=f(x)-\sum\limits_{i=1}^m \lambda_i F^i(x)$.</li>
+	<li>If, in addition, $F^i(x),\cdots,F^m(x),f(x) \in C^{(2)}(D;\mathbb{R})$, $F$ has rank $m$ in $D$. $\dfrac{\partial ^2L}{\partial x^i \partial x^j}(x_0)\xi^i \xi^j$ is positive(resp. negative)definite for $\xi \in TS_{x_0}$, then $x_0$ is a strict local minimum (resp. maximum) of $f|_S$, otherwise $x_0$ is not an extremum.</li>
+</ul>
+
+<h2>Convex</h2>
+<ul>
+	<li>$f  \colon [a, b] \to \mathbb{R}$ is convex if $f(\alpha_1 x_1+\alpha_ 2 x_2) \le \alpha_1f(x_1)+\alpha_2 f(x_2)$ hold for $\forall x_1, x_2 \in [a,b], \alpha_1 > 0, \alpha_2 > 0, \alpha_1 + \alpha_2 = 1$. If this inequality is strict, the function is strictly convex on $[a, b]$.</li>
+	<li>Let $f \colon U(x_0) \to  \mathbb{R}$ be differentiable on $U(x_0) \subset \mathbb{R}$. If the function is convex downward (resp.upward) on the set $U_0^-(x_0)$ and convex upward (resp. downward) on $U_0^+(x_0)$ then $(x_0, f(x_0)$ is called a point of inflection of the graph.</li>
+	<li>A differential function $f \colon I \to \mathbb{R}$ is to be convex (downward) on the interval $I$ is that its derivative $f^{\prime}$ be nondecreasing on $I$. A strictly increasing $f^{\prime}$ corresponds to a strictly convex function.</li>
+</ul>
+
+<h2>Lagrange Polynomial</h2>
+Given a set of $k+1$ data points $(x_0,y_0),\ldots ,(x_j,y_j),\ldots ,(x_k,y_k)$ where no two $x_j$ are the same, the interpolation polynomial in the Lagrange form is $L(x) =\sum\limits_{j=0}^{k}y_j l_j(x)$, of Lagrange basis polynomials, $l_j(x)=\prod\limits_{0\leq m\leq k}^{m \ne j}{\dfrac {x-x_{m}}{x_{j}-x_{m}}}$, where $0\leq j\leq k$.
+
+<h2>Constracting Graph</h2>
+<ul>
+	<li>Give the domain of definition of the function.</li>
+	<li>Note the specific properties of the function if they are obvious (for example, evenness or oddness, periodicity, identity to the graphs of well-known functions up to simple coordinate changes).</li>
+	<li>Determine the asymptotic behavior of the function under approach to boundary points of the domain of definition and, in particular, find asymptotes if they exist. The line $c_0 + c_1x$ is called an asymptote of the graph of the function $y = f(x)$ as $x \to -\infty$ (or $+\infty$) if $f(x)-(c_0 + c_1x) = o(1)$ as $x \to -\infty$ (or $+\infty$).</li>
+	<li>Find the intervals of monotonicity of the function and exhibit its local extreme values.</li>
+	<li>Determine the convexity properties of the graph and indicate the points of inflection.</li>
+	<li>Note any characteristic points of the graph, in particular points of intersection with the coordinate axes, provided there are such and they are amenable to computation.</li>
+</ul>
+</body></html>

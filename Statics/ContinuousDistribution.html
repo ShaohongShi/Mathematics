@@ -1,0 +1,55 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+    ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+    p{margin:1px;padding:0;}
+    html {font-size: 28px;}</style>
+<title>Foundation-Axioms</title>
+</head><body>
+    <a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+    <a href="ProbabilitySpace.html">Probability Space</a>
+    <a href="NumericalCharacteristics.html">Numerical Characteristics</a>
+    <a href="DiscreteDistribution.html">Discrete Distribution</a>
+    <a href="ContinuousDistribution.html">Continuous Distribution</a>
+    <a href="StaticsModel.html">Statics Model</a>
+<h2>Uniform distribution</h2>
+<ul>
+    <li>$f(\boldsymbol{x})=\begin{cases} \dfrac{1}{S} & \boldsymbol{x} \in G \\ \ 0 & \boldsymbol{x} \notin G \end{cases}, G \subset \mathbb{R}^n, G \text{  is bounded with a nonzero measure}$</li>
+    <li>$X \sim U[a,b], EX=\dfrac{a+b}{2}, \operatorname{var}(X)=\dfrac{(b-a)^2}{12}$.</li>
+    <li>Cauchy distribution: $Y=\tan X,X \sim U[-\dfrac{\pi}{2},\dfrac{\pi}{2}], f(y)=\dfrac{1}{\pi(1+y^2)}$.</li>
+    <li>The mathematics expectation of Cauchy distribution does not exist.</li>
+    <li>$F(X) \in C^0,Y=F(X), Y \sim U[0,1]$.</li>
+    <li>$X \sim U[0,1], Y=F^{-1}(X)=\inf\{x \mid F(x)>X\},Y \sim F(x)$.</li>
+</ul>
+<h2>Gamma Distribution</h2>
+<ul>
+    <li>$\Gamma(r,\lambda) \quad f(x)=\dfrac{\lambda^r}{\Gamma(r)}x^{r-1}e^{-\lambda x} (x > 0)$. $r>0$ is the shape parameter, $\lambda>0$ is the scale parameter.</li>
+    <li>$X \sim \Gamma(r_1,\lambda),Y \sim \Gamma(r_2,\lambda)$ are independent, $X+Y,\dfrac{X}{Y}$ are independent.</li>
+    <li>Erlang: $r \in \mathbb{Z}_+, F(W_r=t)=1-\sum\limits_{k=0}^{r-1}\dfrac{(\lambda t)^k e^{\lambda t}}{k!}$, $W_r$ is the time of the $r$th event happens in a Poisson process with $\lambda t$.</li>
+    <li>$\text{Exp}(\lambda))r=0, f(x)=\lambda e^{-\lambda x}, F(x)=1-e^{-\lambda x}, x\ge 0 $</li>
+    <p><span style="background-color:lightgray;">$EX=\dfrac{1}{\lambda}$</span></p>
+    <p><span style="background-color:lightgray;">$X \text{ is a continuous memoryless r.v.} \Leftrightarrow X \sim \text{Exp}(\lambda)$.</span></p>
+    <li>Chi -square: \chi_n^2 \overset{d}{=}\Gamma(\dfrac{n}{2},\dfrac{1}{2}) \quad f(x)=\dfrac{1}{2^{\frac{n}{2}}\Gamma\left(\frac{n}{2}\right)}x^{\frac{n}{2}-1}e^{-\frac{x}{2}}(x>0)$.</li>
+</ul>
+<h2>Normal distribution $N(\mu,\sigma)$</h2>
+<ul>
+    <li>$f(x)=\dfrac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2 \sigma^2}} (\sigma >0), EX=\mu, \operatorname{var}(X)=\sigma^2$.</li>
+    <li>$X \overset{i.i.d}{=}Y$ with second order derivable nonzero density function, $X+Y,X-Y$ are independent $\Leftrightarrow X,Y,X+Y,X-Y \sim$ normal distribution.</li>
+    <li>logrithmic normal: $Y=e^X,X \sim (\mu,\sigma^2),f_Y(y)=\dfrac{1}{\sqrt{2\pi}\sigma y} e^{-\frac{(\ln y-\mu)^2}{2 \sigma^2}}(y>0)$.</li>
+</ul>
+<h2>Normal Distribution Multivariable</h2>
+<ul>
+    <li>$f(x)=\dfrac{1}{(2\pi)^{\frac{n}{2}}(\det{\Sigma})^{\frac{1}{2}}}e^{-\frac{1}{2}( \boldsymbol{x}-\boldsymbol{\mu})\Sigma^{-1}(\boldsymbol{x}-\boldsymbol{\mu})^T}$.</li>
+    <p><span style="background-color:lightgray;">$\Sigma=(\sigma_{ij})$ is a $n$ order positive-definite symmetric matrix.</span></p>
+    <li>$N(\mu_1,\mu_2,\sigma_1^2,\sigma_2^2,\rho), \Sigma=\begin{bmatrix} \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 \end{bmatrix}, \mu=(\mu_1,\mu_2), \sigma_1,\sigma_2 >0,|\rho| < 1$.</li>
+    <li>$f(x,y)=\dfrac{\mathrm{exp}\lbrace-\dfrac{1}{2(1-\rho^2)}[\dfrac{(x-\mu_1)^2}{\sigma_1^2} -2\rho\dfrac{(x-\mu_1)(y-\mu_2)}{\sigma_1 \sigma_2}+ \dfrac{(y-\mu_2)^2}{\sigma_2^2} ]\rbrace}{2\pi \sigma_1 \sigma_2 \sqrt{1-\rho^2}}$.</li>
+    <li>$N(\mu_1,\sigma_1^2) \times N(\mu_2+\rho\dfrac{\sigma_2}{\sigma_1}(x-\mu_1),\sigma_2^2(1-\rho^2))$, $N(\mu_2,\sigma_2^2) \times N(\mu_1+\rho\dfrac{\sigma_1}{\sigma_2}(y-\mu_2),\sigma_1^2(1-\rho^2))$.</li>
+    <li>$X \overset{i.i.d.}{=}Y \sim N(\mu,\sigma^2),\sqrt{X^2+Y^2} \sim \text{Rayleigh } R(r)=re^{-\frac{r^2}{2}}, r \ge 0$.</li>
+    <li>X_1,\cdots,X_n \sim N(0,1)$ are independent, $X=X_1^2+\cdots+X_n^2 \sim \chi_n^2$.</li>
+</ul>
+</body></html>

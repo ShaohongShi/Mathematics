@@ -1,0 +1,89 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+    ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+    p{margin:1px;padding:0;}
+    html {font-size: 28px;}</style>
+<title>Foundation-Axioms</title>
+</head><body>
+    <a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+    <a href="ProbabilitySpace.html">Probability Space</a>
+    <a href="NumericalCharacteristics.html">Numerical Characteristics</a>
+    <a href="DiscreteDistribution.html">Discrete Distribution</a>
+    <a href="ContinuousDistribution.html">Continuous Distribution</a>
+    <a href="StaticsModel.html">Statics Model</a>
+<h2>Probability space</h2>
+<ul>
+    <li>A measure space $(\Omega,\mathcal{F}, P)$.</li>
+    <li>Sample space $\Omega$: the set of all sample points, which are all possible outcomes or results of of an experiment or random trial.</li>
+    <li>Event field $\mathcal{F}$: a selected $\sigma$-algebra of subsets of $\Omega$, $\omega \in \mathcal{F}$ is a event. $\Omega$ is the certain event, and $\varnothing$ is the impossible event.</li>
+    <li>Probability measure $P$: non-negative, normalized and $\sigma$-additivitive.</li>
+    <p><span style="background-color:lightgray;">$\{S_n\} \subset \mathcal{F}$ is a non-decreasing set sequence, then $P(\lim\limits_{n \to \infty}S_n)=\lim\limits_{n \to \infty}P(S_n)$, alongs with finite additive is equaled with $\sigma$-additive.</span></p>
+</ul>
+<h2>Conditional probability</h2>
+<ul>
+    <li>$P(A|B):={\dfrac {P(AB)}{P(B)}},P(B)>0$.</li>
+    <li>$P(A_1 A_2 \cdots A_n)=P(A_1)P(A_2|A_1) \cdots P(A_n | A_{n-1}\cdots A_1)$.</li>
+    <li>$P(A)=\sum\limits _{n}P(A|B_{n})P(B_{n})$,$\left\{{B_n}\right\}$ partitians $\Omega$.</li>
+    <li>(Bayes)$P(A_{i}\mid B)={\dfrac {P(B\mid A_{i})\,P(A_{i})}{\sum \limits _{j}P(B\mid A_{j})\,P(A_{j})}}, \{A_j\}$ partians $\Omega$.</li>
+    <li>(Continuous)Conditional density function= density function \ margin density function.</li>
+</ul>
+<h2>Independent</h2>
+Independent Event
+<ul>
+    <li>$A \perp B \Leftrightarrow P(AB)=P(A)P(B)$.</li>
+    <li>$A \perp B \Rightarrow A \perp \overline B, \overline A \perp B, \overline A \perp \overline B$.</li>
+    <li>$\mathcal{A}=\{A_{i}\} \text{be independent} \Leftrightarrow \forall \mathcal{A}^* \subset \mathcal{A},\mathrm {P}(\bigcap\limits_{A_i \in A^*}A_i)=\prod\limits_{A_i \in A^*}\mathrm {P} (A_i)$.</li>
+    <li>$\{E_i\}$ with event fields $\{\mathcal{A}_i\}$ be independent trials, $\forall A_i \in \mathcal{A}_i, P(A_1A_2 \cdots A_n)=P(A_1)P(A_2) \cdots P(A_n)$.</li>
+</ul>
+Independent r.v.
+<ul>
+    <li>Definition: $F(x_1,\cdots,x_n)=F_1(x_1)\cdots F_n(x_n)$.</li>
+    <li>Continuous: $f(x_1,\cdots,x_n)\overset{\text{a.e.}}{=}f_1(x_1)\cdots f_n(x_n)$.</li>
+    <li>Continuous: $f(x_1,\cdots,x_n)\overset{\text{a.e.}}{=}h_1(x_1)\cdots h_n(x),h_i(x_n)\ne 0$.</li>
+    <li>$g_1(X_1),\cdots,g_n(X_n)$ are independent, $g_i(\cdot)$ is Boral measurable.</li>
+    <li>$\varphi(X_1,\cdots,X_k),X_{k+1},\cdots,X_n$ are independent, $\varphi(\cdot)$ is Boral measurable.</li>
+</ul>
+<h2>Principle of Inclusion and Exclusion</h2>
+<ul>
+    <li>$P(\bigcup\limits_{1}^{n}A_i)=\sum\limits_{i}P(A_i)-\sum\limits_{i < j}P(A_i \cap A_j)+\cdots+(-1)^{n-1}P(A_1 \cap \cdots\cap A_n)$.</li>
+    <li>$P(\bigcap\limits_1^nA_i)=\sum\limits_{i}P(A_i)-\sum\limits_{i < j}P(A_i \cup A_j)+\cdots+(-1)^{n-1}P(A_1 \cup \cdots\cup A_n)$.</li>
+    <p><span style="background-color:lightgray;">$S_1=\sum\limits_{1 \le i \le n}P(A_i)$, $S_2=\sum\limits_{1 \le i < j \le n}P(A_iA_j)$, $\cdots, S_n=P(A_1 \cdots A_n)$</span></p>
+    <li>At least $k$ happens: $P=S_k-\dbinom{k}{k-1}S_{k+1}+\dbinom{k+1}{k-1}S_{k+2}- \cdots +(-1)^{n-k}\dbinom{n-1}{k-1}S_n$.</li>
+    <li>Exactly $k$ happens: $P=S_k-\dbinom{k+1}{k}S_{k+1}+\dbinom{k+2}{k}S_{k+2}- \cdots +(-1)^{n-k}\dbinom{n}{k}S_n$.</li>
+</ul>
+<h2>Random variable</h2>
+<ul>
+    <li>$\quad X: \Omega \to \mathbb{R}, \forall x \in \mathbb{R}$, $\{\omega \mid X(\omega) < x\}\in \mathscr{F}$, with cumulative distribution function $F(x)=P\{\omega \mid X(\omega) < x\}, x \in \mathbb{R}$ and value space $A \in \mathcal{B}(\mathbb{R}),P(X \in A)=1$.</li>
+    <li>$F(x)$ is a distribution function $\Leftrightarrow F(x)$ is non-decreasing, left continuous and $F(- \infty)=0,F(+\infty)=1$.</li>
+    <li>Dicrete: There exists countable $x_i \in \mathbb{R}, P(X=x_i)>0, \sum\limits_i P(x_i)=1$.</li>
+    <li>Continuous: $\exists f(x)>0, \displaystyle{F(x)=\int_{-\infty}^x f(t)\mathrm{d}t}, \forall x \in \mathbb{R}$. $f(x)$ is a probability density function $\Leftrightarrow f(x) \ge 0, \displaystyle{\int_{-\infty}^{+\infty}f(x)\mathrm{d}x=1}$</li>
+    <p><span style="background-color:lightgray;">$\displaystyle{A\in \mathcal{B}(\mathbb{R}), P(X \in A)=\int_A f(x)\mathrm{d}x=\int_{\infty}^{+\infty}I_A f(x)\mathrm{d}x}$.</span></p>
+    <p><span style="background-color:lightgray;">$g(x) \text{ is strictly monotone},g^{-1}(y) \in C^1,f_{Y=g(X)}(y)=|[g^{-1}(y)]^{\prime}|f(g^{-1}(y))$.</span></p>
+    <li>X \overset{i.d.}{=}Y:=F_X(x)=F_Y(x),\forall x \in \mathbb{R}, X \overset{\text{a.s.}}{=}Y:=P(\{\omega:X(\omega) \ne Y(\omega)\})=0$.</li>
+</ul>
+<h2>Random vector</h2>
+Definitions: $X=(X_1, \cdots, X_n), X_i$ are random variables on $(\Omega, \mathcal{F},P)$ with distribution function $F(x_1,\cdots,x_n)=P(\{X_1(\omega) < x_1,\cdots,X_n(\omega) < x_n\})$.
+<ul>
+    <li>$F(x_1,\cdots,x_n)$ is non-decreasing about every variable.</li>
+    <li>$F(x_1,\cdots,-\infty,\cdots,x_n)=0, F(+\infty,\cdots,+\infty)=1$.</li>
+    <li>$F(x_1,\cdots,x_n)$ is left-continuous about each variable.</li>
+    <li>$F(b_1,b_2)-F(b_1,a_2)-F(a_1,b_2)+F(a_1,a_2) \ge 0, \forall a_1 < b_1, a_2 < b_2$.</li>
+    <li>$F(x_1,x_2)$ is a distribution function $\Leftrightarrow F(x_1,x_2)$ satifies $2^0,3^0,4^0$.</li>
+    <li>The uncontinuous points of $F$ can be dense in $\mathbb{R}^n$.</li>
+</ul>
+Density function
+<ul>
+    <li>$f(x_1, \cdots,x_n) \ge 0 \text{ on } \mathbb{R}^n$.</li>
+    <li>$\displaystyle{\int_{-\infty}^{+\infty}\cdots\int_{-\infty}^{+\infty}f(t_1,\cdots,t_n)\mathrm{d}t_1 \cdots \mathrm{d}t_n}=1$</li>
+    <li>$\displaystyle{F(x_1, \cdots, x_n)=\int_{-\infty}^{x_1}\cdots\int_{-\infty}^{x_n}f(t_1,\cdots,t_n)\mathrm{d}t_1 \cdots \mathrm{d}t_n}$.</li>
+    <li>$\forall A \in \mathcal{B}(\mathbb{R}^n), P(X \in A)=\displaystyle{\int_A f(t_1, \cdots, t_n)\mathrm{d}t_1\cdots \mathrm{d}t_n}$.</li>
+    <li>$(marginal)\displaystyle{\int_{-\infty}^{x_{i_1}}\cdots \int_{-\infty}^{x_{i_k}}\mathrm{d}x_{i_1} \cdots \mathrm{d}x_{i_k}\underbrace{\int_{\mathbb{R}^{n-k}}f(t_1, \cdots, t_n)\mathrm{d}x_{i_{k+1}}\cdots \mathrm{d}x_{i_n}}_{\text{marginal density function}}}$</li>
+    <li>Transformation: $f(y_1,\cdots,y_n)=f_0(g^{-1}_1,\cdots,g^{-1}_n)|J(g_i)|^{-1}$.</li>
+</ul>
+</body></html>

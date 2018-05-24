@@ -1,0 +1,85 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+	ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+	p{margin:1px;padding:0;}
+	html {font-size: 32px;}</style>
+<title>Topology-Metric Space</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="MetricSpace.html">Metric Space</a>
+<h2>Definition</h2>
+<ul>
+	<li>Metric $d : M \times M \to \mathbb{R}$ which is positive definite,symmetry and subadditivity.</li>
+	<li>Euclidean distance: $d(\bf{x},\bf{y})=\sqrt[n]{\sum\limits_{i=1}^{n}(x_i-y_i)^2}$.</li>
+	<li>Discrete metric: $d(x,y) =\begin{cases}0 & \text{ if } x=y \\ 1 & \text{ if } x \ne y\end{cases}$.</li>
+	<li>Open ball: $B(x;r) = \{y \in M : d(x,y) < r\}$ forms the basis of topology.</li> 
+	<li>Closed ball: $\overline{B}(a;r)=\{x \in X : d(x,a) \le r\}$</li> 
+	<li>Interior point: $\exists B(x; r) \subset A, A \subset M$.</li>
+	<li>Exterior point: $\exists B(x; r) \subset A^c, A \subset M$.</li> 
+	<li>Boundary point: $\forall B(x; r) \cap A \ne \emptyset$, $B(x; r) \cap A^c \ne \emptyset$.</li>
+	<li>Open: $\forall x\in U,\exists B(x;r) \subset U$ does not contain any of its boundary points.</li>
+	<li>Closed: $U^C$ is open or contains all its boundary points or every sequence in $A$ that converges to a limit in $M$ has its limit in $A$. </li>
+	<li>Neighborhood: any subset of $M$ that contains an open ball about $x$.</li>
+</ul>
+<h2>Sequence</h2>
+<ul>
+	<li>Sequence: $f \colon \mathbb{N} \to X$.</li>
+	<li>$\{x_{n}\}$ in a metric space $M$ converge to the limit $x\in M$ iff $\forall \epsilon >0$, $\exists N \in \mathbb{N}$, $d(x_n,x) < \epsilon, \forall n>N$.</li>
+	<li>Cauchy sequence: if $\forall \epsilon > 0$ ,$\exists N \in \mathbb{N}$, s.t., $\forall m, n > N$, the distance $d(x_m, x_n) < \epsilon$.</li> 
+	<li>Any neighborhood of the limit of a sequence contains all but a finite number of terms of the sequence.</li>
+	<li>A convergent sequence is bounded and has a unique limit.</li>
+	<li>A sequence converges iff every subsequence of converges.</li>
+	<li>Every convergent sequence is a Cauchy sequence and the inverse holds in complete metric space.</li>
+	<li>Every monotone, bounded sequence of real numbers converges.</li>
+</ul> 
+<h2>Completeness</h2>
+<ul>
+	<li>A metric space $M$ is complete if every Cauchy sequence in $M$ converges in $M$.</li>
+	<li>Assume that $(X, d)$ is a complete metric space. If $A$ is a subset of $X$, $(A,d_A)$ is complete if and only if $A$ is closed.</li>
+	<li>Let $\{A_n\}$ be a collection of closed subsets of complete space $M$ such that $A_{n+1} \subset A_n$ and $\lim\limits_{n \to \infty}\mathrm{diam}(A_n)=0$($\mathrm{diam}(A):=\sup{\{d(x, y) | x, y \in A\}}$, then $\exists ! \xi \in M$, s.t., $\xi \in A_n, \forall n \in \mathbb{N}$.</li>
+	<li>$f : X \to X$ is called a contraction if there is a positive number $s < 1$ such that 
+$d(f(x),f(y)) \le s\ d(x,y)$ for all $x,y \in X$. We call $s$ a contraction factor for $f$. All contractions are continuous.</li>
+	<li>Banach’s Fixed Point Theorem: $(X, d)$ is a complete metric space and that $f : X → X$ is a contraction. Then $f$ has a unique fixed point $a$, and $\forall x_0 \in X$, $\{f^{\circ n}(x_0)\}$ converges to $a$.</li>
+</ul>
+<h2>Compact</h2> 
+<ul>
+	<li>$K \subset (X,d)$ is compact if every sequence in $K$ has a subsequence converging to a point in $K$.</li>
+	<li>$A \subset (X,d)$ is bounded if $\exists b \in X, K \in \mathbb{R}$ such that $d(a,b) \le K$, $\forall a \in A$.</li>
+	<li>Every compact set in $(X, d)$ is closed and bounded. In $\mathbb{R}^n$ the converse holds (Bolzano-Weierstrass). $(\mathbb{N}, d)$ where $d$ is the discrete metric shows that this is not the case for all metric space.</li>
+	<li>Every compact metric space is complete.</li>
+	<li>$A \subset (X,d)$ is totally bounded if $\forall \epsilon > 0$, $\exists B(a_1,\epsilon),B(a_2,\epsilon),...,B(a_n,\epsilon)$ cover $A$.</li>
+	<li>A subset $A$ of a complete metric space $X$ is compact if and only if it is closed and totally bounded.</li>
+</ul>
+<h2>Connectivity</h2>
+A set $E \subset \mathbb{R}^n$ is pathwise connected if for any pair of its points $p,q$ there exists a continuous path in $E$ such that $T:[0,1] \to \mathbb{R}^n$, $T(0)=p, T(1)=q$ 
+The domain (an open connected set) in $\mathbb{R}^n$ is pathwise connected. 
+An open set $D$ in $\mathbb{R}^n$ is connected if and only if $D$ cannot be expressed as the union of two disjoint non-empty open subset. 
+If $S_1,S_2$ are connected sets,$S_1 \cap \bar{S_2} \ne \emptyset$, then $S_1 \cup S_2$ is connected. 
+
+\myi{Continuous Map} 
+Assume that $(X, d_X )$, $(Y, d_Y)$ are two metric spaces. A function $f :X \to Y$ is continuous at a point $a \in X$ if $\forall \epsilon >0$, $\exists \delta > 0$, s.t., $d_Y (f(x),f(a)) < \epsilon$ whenever $d_X(x,a) < \delta$. $f$ is called continuous if it continuous at all points $x$ in $X$. 
+The following are equivalent for a function $f : X \to Y$ between metric spaces: 
+(a) $f$ is continuous at a point $a \in X$. 
+(b) For all sequences $\{x_n\}$ converging to $a$, the sequence $\{f(x_n)\}$ converges 
+to $f(a)$. 
+(c) For all neighborhoods $V$ of $f(x_0)$, there is a neighborhood $U$ of $x_0$ such 
+that $f(U) \subset V$. 
+(d) Whenever $V$ is an open subset of $Y$ , the inverse image $f^{-1}(Y)$ is an open set in $X$. 
+(e) Whenever $V$ is a closed subset of $Y$ , the inverse image $f^{-1}(Y)$ is a closed set in $X$. 
+$\bigstar$ Be aware that these properties are not preserved under continuous, direct images; even if f is continuous. 
+Let $(X, d_X)$, $(Y, d_Y), (Z, d_Z)$ be three metric spaces. Assume that $f:X \to Y$ is continuous at $a \in X$ and $g:Y \to Z$continuous at $b = f(a)$, then $h(x) = g(f(x))$ is continuous at $a$. 
+The map $f:M_1 \to M_2$ is uniformly continuous if $\forall \epsilon > 0$, $\exists \delta > 0$ such that $d_1(x,y)<\delta \Rightarrow d_2(f(x),f(y))< \epsilon ,\forall x,y\in M_1$. 
+Every uniformly continuous map $f: M_1 \to M_2$ is continuous. The converse is true if $M_1$ is compact (Heine–Cantor theorem). 
+Given a real number $K > 0$, the map $f : M_1 \to M_2$ is K-Lipschitz continuous if $d_2(f(x),f(y)) \le K d_1(x,y), \forall x,y \in M_1$. 
+Every Lipschitz-continuous map is uniformly continuous, but the converse is not true in general. 
+
+\myi{Maps on Compact Set} 
+Assume that $f : X \to Y$ is a continuous function be- tween two metric spaces. If $K \in X$ is compact, then $f(K)$ is a compact subset of $Y$. 
+(The Extreme Value Theorem) Assume that $K$ is a compact subset of a metric space $(X, d)$, and that $f : K \to R$ is a continuous function. Then $f$ has maximum and minimum points in $K$, i.e. there are points $c, d \in K$ such that $f(d) \le f(x) \le f(c), \forall x \in K$.
+</body></html>

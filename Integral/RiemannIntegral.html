@@ -1,0 +1,79 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+	ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+	p{margin:1px;padding:0;}
+	html {font-size: 28px;}</style>
+<title>Differential-Real-Value Function</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="IndefiniteIntegral.html">Indefinite Integral</a>
+	<a href="RiemannIntegral.html">Riemann Integral</a>
+    <a href="SpecialIntegral.html">Special Integral</a>
+    <a href="Application.html">Applicatioon</a>
+<h2>Riemann Integral</h2>
+$$\displaystyle{\int_a^b f(x)\mathrm{d}x:=\lim\limits_{\lambda(P) \to 0} \sum\limits_{i=1}^n f(\xi_i)\Delta x_i}$$
+<ul>
+	<li>$\lambda(P): \max\{\Delta x_i=x_i-x_{i-1}, i=1, \cdots,n\}$.</li>
+	<li>$P:a=x_0 < x_1 < \cdots < x_n=b$.</li>
+</ul>
+$f$ is bounded on $[a, b]$
+<ul>
+	<li>$\impliedby (f \in \mathcal{R}[a, b])$.</li>
+	<li>$\implies \displaystyle{\lim\limits_{\lambda(P) \to 0}\sum\limits_{i=1}^n M_i \Delta x_i=\overline{\int_a^b}f(x)\mathrm{d}x}$.</li>
+	<p><span style="background-color:lightgray;">$(\inf\limits_P {\sum\limits_{i=1}^n M_i \Delta x_i},M_i=\sup\limits_{x \in [x_{i-1},x_i]}\{f(x)\})$.</span></p>
+	<li>$\implies \displaystyle{\lim\limits_{\lambda(P) \to 0}\sum\limits_{i=1}^n m_i \Delta x_i=\underline{\int_a^b}f(x)\mathrm{d}x}$.</li>
+	<p><span style="background-color:lightgray;">$(\sup\limits_P {\sum\limits_{i=1}^n m_i \Delta x_i},m_i=\inf\limits_{x \in [x_{i-1},x_i]}\{f(x)\})$</span></p>
+</ul>
+$f$ is bounded on $[a, b]$, $(f \in \mathcal{R}[a,b])$
+<ul>
+	<li>$\iff \forall \epsilon >0$, $\exists \delta >0$, $\sum\limits_{i=1}^n \omega_i \Delta x_i < \epsilon$, $\forall \lambda(P)<\delta$.</li>
+	<li>$\iff \displaystyle{\overline{\int_a^b}f(x)dx=\underline{\int_a^b}f(x)\mathrm{d}x}$.</li>
+	<li>$\iff f$ is continuous at almost every point.</li>
+	<li>$\impliedby f$ is monotonic.</li>
+</ul>
+<h2>Vector Space</h2>
+If $f,g \in \mathcal{R}[a, b]$,
+<ul>
+	<li>$\int\limits_a^b (\alpha f+\beta g)\mathrm{d}x=\alpha \int\limits_a^b f\mathrm{d}x+\beta \int\limits_a^b g\mathrm{d}x$.</li>
+	<li>$f|_{[c,d]} \in \mathcal{R}[a, b], \text{if } [c,d] \subset [a,b]$.</li>
+	<li>$(f \cdot g) \in \mathcal{R}[a, b]$.</li>
+	<li>$\forall \alpha,\beta,\gamma \in [a,b], \int\limits_{\alpha}^{\beta}f\mathrm{d}x+\int\limits_{\beta}^{\gamma}f\mathrm{d}x=\int\limits_{\alpha}^{\gamma}f\mathrm{d}x$.</li>
+	<li>If $g \in C(f([a,b]))$, $g(f) \in \mathcal{R}[a,b]$.</li>
+	<p><span style="background-color:lightgray;">$f \in \mathcal{R}[a,b]$, $F(x)=\int_a^x f(t)\mathrm{d}t \implies F(x)\in C[a,b]$.</span></p>
+	<p><span style="background-color:lightgray;">If in addition, $f$ is continuous at $x_0 \in [a,b]$, then $F^{\prime}(x_0)=f(x_0)$.</span></p>
+</ul>
+$\phi :[\alpha, \beta] \to [a,b] \in C^1[\alpha, \beta]$, $\phi(\alpha)=a, \phi(\beta)=b$, if $f(x) \in C^1[a,b]$ or $\phi(x)$ is strictly monotonic, $f(x) \in \mathcal{R}[a,b]$ , then $\int _a^b f(x)\mathrm{d}x=\int _{\alpha}^{\beta} f(\phi(x))\phi^{\prime}(x)\mathrm{d}x$.
+<h2>Inquality</h2>
+If $f,g \in \mathcal{R}[a, b]$, then
+<ul>
+	<li>$|\int\limits_a^b f\mathrm{d}x| \le \int\limits_a^b |f|\mathrm{d}x$.</li>
+	<li>If $f \le g$ on $[a,b]$, $\int\limits_a^b f\mathrm{d}x \le \int\limits_a^b g\mathrm{d}x$.</li>
+	<li>$\forall \epsilon>0, \exists h \in C[a,b]$, $\int\limits_a^b |f-h|\mathrm{d}x<\epsilon($or $\int\limits_a^b |f-h|^2\mathrm{d}x<\epsilon)$.</li>
+	<p><span style="background-color:lightgray;">use step function to simulate.</span></p>
+	<li>If $\int\limits_a^bf\mathrm{d}x>0$, then $\exists \mu>0, [c,d] \subset [a,b], f>\mu$ on $[c,d]$.</li>
+	<li>If $f>0$ on $[a,b]$, then $\int\limits_a^bf\mathrm{d}x>0$.</li>
+</ul>
+<h2>Mean-value theorem</h2>
+<ul>
+	<li>First: Let $f,g \in \mathcal{R}[a,b]$ and $g$ be sign-preserving on $[a,b]$, then $\int_a^b (f \cdot g)(x)\mathrm{d}x=\mu \int_a^b g(x)\mathrm{d}x$, where $\mu \in [\inf\limits_{x \in [a,b]}f(x), \sup\limits_{x \in [a,b]}f(x)]]$. If, in addition, $f \in C[a,b]$, $\int_a^b (f \cdot g)(x)\mathrm{d}x=f(\xi) \int_a^b g(x)\mathrm{d}x$, where $\xi \in [a,b]$.
+
+	Let $f,g \in \mathcal{R}[a,b]$ and $g$ be nonnegative and nonincreasing on $[a,b]$, then $\int_a^b (f \cdot g)(x)\mathrm{d}x=g(a) \int_a^{\xi} f(x)\mathrm{d}x$, where $\xi \in [a,b]$.</li>
+	<li>Second Let $f,g \in \mathcal{R}[a,b]$ and $g$ be monotonic on $[a,b]$, then $\int_a^b (f \cdot g)(x)\mathrm{d}x=g(a) \int_a^{\xi} f(x)\mathrm{d}x +g(b) \int_{\xi}^b f(x)\mathrm{d}x$, where $\xi \in [a,b]$.</li>
+</ul>
+<h2>Fundamental theorem of calculus</h2>
+<ul>
+	<li>If $f \in \mathcal{R}[a,b]$ then $\int _a^b f(x)\mathrm{d}x=F(b)-F(a)$, where $F$ is an primitive of $f$ in $[a,b]$.</li>
+	<li>Let $f \in \mathcal{R}[a,b], F(x)=\int _{a}^{x}f(t)\mathrm{d}t, \forall x\in [a,b]$.
+		<ul>
+			<li>$F$ is Lipschitz continuous on $[a,b]$.</li>
+			<li>If, in addition, $f \in C[a,b]$, then $f \in C^{1}(a,b)$ with $F^{\prime}(x)=f(x)$.</li>
+		</ul>
+	</li>
+</ul>
+</body></html>

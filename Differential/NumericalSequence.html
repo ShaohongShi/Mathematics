@@ -1,0 +1,51 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$']]},messageStyle: "none"});</script>
+<style> 
+    ol {margin-top: 5px; margin-bottom:5px; margin-left:42px; padding:0px;}
+    ul{margin-top: 5px; margin-bottom:5px; margin-left:38px; padding:0px;}
+    p{margin:1px;padding:0;}
+    h2{margin-top:8px; margin-bottom:8px; padding:0px;}
+    html {font-size: 40px;}</style>
+<title>Differential-Numerical Sequence</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="NumericalSequence.html">Numerical Sequence</a>
+	<a href="Real-valueFunction.html">Real-Value Function</a>
+    <a href="DifferentialTheorems.html">Differential Theorems</a>
+    <a href="Application.html">Applicatioon</a>
+<h2>Approximation</h2>
+$x$ is the exact value of a quantity, $\tilde{x}$ a known approximation to the quantity, 
+<ul>
+	<li>Absolute $\Delta (\tilde{x}) := |x-\tilde{x}|$, relative $\delta (\tilde {x}):=\dfrac{\Delta (\tilde{x})}{|\tilde{x}|}$.</li>
+	<li>$\Delta (\tilde{x}+\tilde{y}) \le \Delta(\tilde{x})+\Delta(\tilde{y}), \delta (\tilde{x}+\tilde{y}) \le \dfrac{\Delta(\tilde{x})+\Delta(\tilde{y})}{|\tilde{x}+\tilde{y}|}$</li>
+	<li>$\Delta (\tilde{x} \cdot \tilde{y}) \le |\tilde{x}|\Delta(\tilde{y})+|\tilde{y}|\Delta(\tilde{x})$</li>
+	<li>$\delta (\tilde{x} \cdot \tilde{y}) \le \delta(\tilde{x})+\delta(\tilde{y})+\delta(\tilde{x}) \cdot \delta(\tilde{y})$</li>
+	<li>$\Delta\left(\dfrac{\tilde{x}}{\tilde{y}}\right) \le \dfrac{|\tilde x| \Delta(\tilde y)+|\tilde y| \Delta(\tilde x)}{\tilde{y}^2(1-\delta(\tilde y))}, \delta\left(\dfrac{\tilde x}{\tilde y} \right) \le \dfrac{\delta(\tilde x)+\delta(\tilde y)}{1-\delta(\tilde y)}$</li>
+</ul>
+<h2>Prosperity</h2>
+<ul>
+	<li>Limits of sequences behave well with four arithmetic operations.</li>
+	<li>(Squeeze) If $x_n \le z_n \le y_n, \forall n>N,$ and $\lim\limits_{n\to \infty }x_n=\lim\limits_{n\to \infty }y_n=L$, then $\lim\limits_{n \to \infty}z_n=L.$</li>
+	<li>(Cauchy) If $\lim\limits_{n \to \infty}{x_n}=x$, $\lim\limits_{n \to \infty}{y_n}=y$, </li>
+	<p><span style="background-color:lightgray;">$\lim\limits_{n \to \infty} \dfrac{1}{n}\sum\limits_{i=0}^n x_i = x, \lim\limits_{n \to \infty}.</span></p>
+	<p><span style="background-color:lightgray;">\dfrac{1}{n}\sum\limits_{i=0}^n x_iy_{n-i} = xy$.</span></p>
+	<p><span style="background-color:lightgray;">In addtional, $x_n>0$, $\lim\limits_{n \to \infty}(\prod\limits_{i=1}^{n}x_i)^{\frac{1}{n}}=x$.</span></p>
+	<li>(Stolz) $\lim\limits_{n \to \infty}\dfrac{a_{n+1}-a_n}{b_{n+1}-b_n} = l \Rightarrow \lim\limits_{n \to \infty}\dfrac{a_n}{b_n}=l$ if</li>
+	<p><span style="background-color:lightgray;">$\{b_n\}$ is strictly monotone and divergent sequence.</span></p>
+	<p><span style="background-color:lightgray;">$\{a_n\}$ and $\{b_n\}$ be infinitesimal, $\{b_n\}$ is strictly monotone.</span></p>
+</ul>
+<h2>Upper and Lower limit</h2>
+$\mathop{\underline{\lim}}\limits_{n \to \infty}x_k := \lim\limits_{n \to \infty}\inf\limits_{k \ge n}x_k, \mathop{\overline{\lim}}\limits_{n \to \infty}x_k := \lim\limits_{n \to \infty}\sup\limits_{k \ge n}x_k$.
+<ul>
+	<li>Partial limit	is the limit of a converging subsequence, the inferior and superior limits of a bounded sequence are respectively the smallest and largest.</li>
+	<li>A sequence has a limit or tends to negative or positive infinity if and only if its inferior and superior limits are the same.</li>
+</ul>
+For bounded sequences $\{x_n\}, \{y_n\}, x_n < y_n$
+<ul>
+	<li>$\mathop{\underline{\lim}}\limits_{n \to \infty} (-x_n) = -\mathop{\overline{\lim}}\limits_{n \to \infty}x_n$, $\mathop{\overline{\lim}}\limits_{n \to \infty} (-x_n) = -\mathop{\underline{\lim}}\limits_{n \to \infty}x_n$</li>
+	<li>$\mathop{\underline{\lim}}\limits_{n \to \infty}x_n \le \mathop{\underline{\lim}}\limits_{n \to \infty}y_n$, $\mathop{\overline{\lim}}\limits_{n \to \infty}x_n \le \mathop{\overline{\lim}}\limits_{n \to \infty}y_n$.</li>
+	<li>$\mathop{\underline{\lim}}\limits_{n \to \infty}x_n+\mathop{\underline{\lim}}\limits_{n \to \infty}y_n \le \mathop{\underline{\lim}}\limits_{n \to \infty}(x_n+y_n) \le \mathop{\underline{\lim}}\limits_{n \to \infty}x_n+\mathop{\overline{\lim}}\limits_{n \to \infty}y_n \le \mathop{\overline{\lim}}\limits_{n \to \infty}(x_n+y_n) \le \mathop{\overline{\lim}}\limits_{n \to \infty}x_n+\mathop{\overline{\lim}}\limits_{n \to \infty}y_n$.</li>
+	<li>If $x_n, y_n>0, \mathop{\underline{\lim}}\limits_{n \to \infty}x_n \cdot \mathop{\underline{\lim}}\limits_{n \to \infty}y_n \le \mathop{\underline{\lim}}\limits_{n \to \infty}(x_n \cdot y_n) \le \mathop{\underline{\lim}}\limits_{n \to \infty}x_n \cdot \mathop{\overline{\lim}}\limits_{n \to \infty}y_n \le \mathop{\overline{\lim}}\limits_{n \to \infty}(x_n \cdot y_n) \le \mathop{\overline{\lim}}\limits_{n \to \infty}x_n \cdot \mathop{\overline{\lim}}\limits_{n \to \infty}y_n$</li>
+</ul>
+</body></html>s

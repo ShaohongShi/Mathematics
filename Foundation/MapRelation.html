@@ -1,0 +1,89 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$']]},messageStyle: "none"});</script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS": { linebreaks: { automatic: true } },SVG: { linebreaks: { automatic: true } }});</script>
+<style> 
+    ol {margin-top: 5px; margin-bottom:5px; margin-left:52px; padding:0px;}
+    ul{margin-top: 5px; margin-bottom:5px; margin-left:38px; padding:0px;}
+    p{margin:1px;padding:0;}
+    h3{margin-top:8px; margin-bottom:8px; padding:0px;}
+    html {font-size: 40px;}</style>
+<title>Foundation-Map Realation</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="Axioms.html">Axioms</a>
+    <a href="MapRelation.html">Map Relation</a>
+    <a href="Cardinality.html">Cardinality</a>
+    <a href="SymbolsAlgebra.html">Symbols in Algebra</a>
+    <a href="SymbolsTopology.html">Symbols in Topology</a>
+    <a href="SymbolsAnalysis.html">Symbols in Analysis</a>
+    <a href="Others.html">Others</a>
+<h3>Function</h3>
+<ul>
+	<li>$f \mid A_0$: restrict $f\colon A \to B$ to $A_0 \subset A$.</li>
+ 	<li>Composition of $f\colon A \to B, g \colon B \to C$</li>
+ 		$$g \circ f \colon A \to C, (g \circ f)(a)=g(f(a)) \, .$$
+ 	<li>Inverse: $f^{-1}, f$ is bijective</li>
+ 	<li>Injective: $f(a_1)=f(a_2) \implies a_1=a_2$.</li>
+	<li>Surjective: $b \in B \implies \exists a \in A,b=f(a)$.</li>
+	<li>Image: $f(A_0)=\{b \mid \exists a \in A_0,b=f(a)\}, A_0 \subset A$.</li>
+	<li>Preimage: $f^{-1}(B_0)=\{a \mid f(a) \in B_0\},b_0 \subset B$.</li>
+	<li>Support: $\operatorname{supp}(f) = \{i \in X \mid f(i) \ne 0\}$.</li>
+	<li>Multivalued function: every input is associated with at least one output.</li>
+</ul>
+<h3>Homomorphism Definition</h3> 
+<ul>
+	<li>A structure-preserving map between mathematical structures.</li>
+	<li>In set theory: functions.</li>
+ 	<li>In linear algebra: linear transformations.</li>
+ 	<li>In group theory: group homomorphisms.</li>
+ 	<li>In topology: continuous functions.</li>
+</ul>
+<h3>Homomorphism(Category Theory)</h3>
+<ul>
+ 	<li>Monomorphism: $f \colon X \rightarrowtail Y$</li>
+ 		$$\forall g_1,g_2:X \to Y, f \circ g_1=f \circ g_2 \Rightarrow g_1=g_2 \, .$$
+ 	<li>Epimorphism: $f \colon X \twoheadrightarrow Y$</li>
+ 		$$\forall g_1,g_2:X \to Y, g_1 \circ f=g_2 \circ f \Rightarrow g_1=g_2 \, .$$
+ 	<li>Isomorphism: $f \colon X \to^{\sim} Y$</li>
+ 		$$\exists g:Y \to X, g \circ f=f \circ g= \mathrm{id}_X \, .$$
+ 	<li>Endomorphism: a morphism $f \colon X \to X$</li>
+ 	<li>Automorphism: be both an endomorphism and an isomorphism</li>
+</ul>
+<h3>Relation</h3>
+<ul>
+ 	<li>Comparability(C): $\forall x \ne y, (xCy)\lor (yCx)$.</li>
+ 	<li>(Non)reflexivity(R,nR): $\forall x, xCx,(\nexists x, xCx).$</li>
+ 	<li>Symmetry(S): $xCy \Rightarrow yCx$.</li>
+ 	<li>Antisymmetry(aS): $xCy \Rightarrow \neg yCx$.</li>
+ 	<li>Transitivity(T): $(xCy)\land (yCz) \Rightarrow (xCz)$.</li>
+ 	<li>Negative T(nT): $(\neg xCy) \land (\neg yCz) \Rightarrow \neg xCz)$.</li>
+ </ul>
+<h3>Equivalence</h3>
+<ul>
+ 	<li>Partian: $\mathcal{B}$ $\bigcup\limits_{B \in \mathcal{B}}=A, (B_1 \cap B_2 = \emptyset) \lor (B_1=B_2)$ in $\mathcal{B}$.</li>
+ 	<li>A set of equivalence classes in $A$ is denoted by $\bar{A}$<./li>
+ 	<li>(Complete) invariant: $f:A \to B$ is constant (and distinct) on the equivalence classes.</li>
+ 	<li>Canonical forms: $C \subset A$ has exactly one mumber of each equivalence class.</li>
+ </ul>
+<h3>Order</h3>
+<ul>
+	<li>Usual order relation: $x < y$ on $\mathbb{R}$,and $(x,y)=\{a: x < a < y\}$ is an open interval $a < b, (a,b)=\{a < x < b\}$. In addition, if $(x,y)=\emptyset$, $x, y$ are immediate predecessor and immediate successor.</li>
+ 	<li>Order type: there is a bijective function $f:A \to B, a_1 <_A a_2 \implies f(a_1) <_B f(a_2)$.</li>
+ 	<li>Dictionary order: $a_1 \times b_1 < a_2 \times b_2$ if $a_1 < a_2$ or if $a_1=a_2, b_1< b_2$.</li>
+ 	<li>An ordered set has the least upper bound($\sup$) property $\Leftrightarrow$ it has the greatest lower bound($\inf$) property.</li>
+ </ul>
+<h3>Partial Order</h3>
+<ul>
+ 	<li>Extremum: $\forall a \in P$ maximum: $a \le g$, minimum: $a \ge g$.</li>
+ 	<p><span style="background-color:lightgray;">A poset can only have one maximum or minimum.</span></p>
+ 	<li>Maximal and minimal: $\nexists a \in P$ maximal: $a > g$, minimal: $a < m$.</li>
+ 	<li>Bound: $\forall a \in A$, upper : $a \le x$, lower: $a \ge x$.</li>
+ </ul>
+<h3>Order in Sets</h3>
+<ul>
+	<li>$\lim\limits_{n \to \infty}{A_n}=\bigcup\limits_{n=1}^{\infty}{A_n}, A_1 \subset A_2 \subset \cdots \subset A_n \subset \cdots$</li>
+ 	<li>$\lim\limits_{n \to \infty}{A_n}=\bigcap\limits_{n=1}^{\infty}{A_n},A_1 \supset A_2 \supset \cdots \supset A_n \supset \cdots$</li>
+ 	<li>$\mathop{\overline{\lim}}\limits_{n \to \infty}{A_n}=\bigcap\limits_{n=1}^{\infty} \bigcup\limits_{k=n}^{\infty} {A_k}, \mathop{\underline{\lim}}\limits_{n \to \infty}{A_n}=\bigcup\limits_{n=1}^{\infty} \bigcap\limits_{k=n}^{\infty} {A_k}$</li>
+</ul>
+</body></html>

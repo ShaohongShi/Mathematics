@@ -1,0 +1,46 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$']]},messageStyle: "none"});</script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS": { linebreaks: { automatic: true } },SVG: { linebreaks: { automatic: true } }});</script>
+<style> 
+    ol {margin-top: 5px; margin-bottom:5px; margin-left:52px; padding:0px;}
+    ul{margin-top: 5px; margin-bottom:5px; margin-left:38px; padding:0px;}
+    p{margin:1px;padding:0;}
+    h3{margin-top:8px; margin-bottom:8px; padding:0px;}
+    html {font-size: 40px;}</style>
+<title>Foundation-Carinality</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="Axioms.html">Axioms</a>
+    <a href="MapRelation.html">Map Relation</a>
+    <a href="Cardinality.html">Cardinality</a>
+    <a href="SymbolsAlgebra.html">Symbols in Algebra</a>
+    <a href="SymbolsTopology.html">Symbols in Topology</a>
+    <a href="SymbolsAnalysis.html">Symbols in Analysis</a>
+    <a href="Others.html">Others</a>
+<h3>Finite and infinite</h3> 
+ finite and infinite given by $\mathbb{Z}$ 
+ $A$ is infinite iff there exists a bijection of $A$ and a proper subset of itself 
+<h3>Cardinality</h3>
+<ul>
+ 	<li>given by bijection</li>
+ 	<li>$(|A| \le |B|)\land (|B| \le |A|) \Rightarrow (|A|=|B|)$</li>
+ 	<p><span style="background-color:lightgray;">$\cdots \to f^{-1}(g^{-1}(a)) \to g^{-1}(a) \to a \to f(a) \to g(f(a)) \to \cdots$, then $A$ stopper, $B$ stopper and non-stopper partians the (disjoint) union of $A$ and $B$</span></p>
+ </ul>
+<h3>Arithimetic</h3>
+ $S \cap T=\emptyset, 1 \le |T|=\lambda \le |S|=\kappa, \kappa$ is infinite
+ <ol>
+ 	<li>$\kappa+\lambda=|S \cup T|=\kappa = |S \times T|=\kappa \lambda$</li>
+ 	<p><span style="background-color:lightgray;">(1) get $\kappa = \aleph_0 \cdot \zeta$</span></p>
+	<p><span style="background-color:lightgray;">(2) Define $\chi=\{(D,f): D \subset A, f \colon D \to D \times D \text{ is bijective }\}, f(D)=D \times D, \kappa=\operatorname{card}(D)$</span></p>
+ 	<li>$\kappa^{\lambda}=|S^T|, \kappa =|S| < |\mathcal{P}(S)|=2^{\kappa}$</li>
+ 	<p><span style="background-color:lightgray;">$f \colon A \to \mathscr{P}, B=\{x \in A: x \notin f(x)\}$, focus on $f(y)=B$</span></p>
+</ol>
+<h3>Natural and Linear Contiunmn</h3>
+<ol>
+	<li>Natural Number: $\aleph_0=|\mathbb{N}|=|\mathbb{Q}|=|\mathbb{Z}^n|=|\overline{\mathbb{Q}}|=|\{\text{finite subsets of } \mathbb{N}\}|$</li>
+	<p><span style="background-color:lightgray;">Use $p_1,p_2,\cdots$</span></p>
+ 	<li>Real Number: $\aleph_1=2^{\aleph_0}=|\mathbb{R}|= \aleph_0^{\aleph_0}=\aleph_1=|\{\text{finite subsets of }\mathbb{R}\}|$</li>
+    <li>Linear continumn: lacks gaps(dense) and the least upper bound property</li>
+</ol>
+</body></html>

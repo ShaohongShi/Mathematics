@@ -1,0 +1,54 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+	ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+	p{margin:1px;padding:0;}
+	html {font-size: 28px;}</style>
+<title>Foundation-Axioms</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="Models.html">Models</a>
+    <a href="TwoBodyProblem.html">Two Body Problem</a>
+<h2>Body of Variable Mass</h2>
+    Consider a rocket moving in a straight line in outer space, far from gravitating bodies.
+<ul>
+    <li>$M(t)$: the mass of the rocket (including fuel) at time t.</li>
+    <li>$V(t)$: its velocity at time $t$.</li>
+    <li>$\omega$: the speed (relative to the rocket) the fuel flows out.</li>
+    <li>$V(t)=V(0)+\omega \ln {\dfrac{M(0)}{M(t)}}$.</li>
+</ul>
+<h2>Barometric Formula</h2>
+<ul>
+    <li>$p(h)$ be the pressure at elevation $h$.</li>
+    <li>$\rho (h)$ be the density of air at elevation $h$.</li>
+    <li>$p(h+\Delta h)-p(h)=-g\rho (\xi)\Delta h, h< \xi < h+\Delta h$.</li>
+    <li>$p=\rho \dfrac{RT}{M}=\lambda (T)\rho$.</li>
+    <li>$p=p_0\mathrm{e}^{-(g/\lambda)h}$</li>
+</ul>
+<h2>Chain Reactions</h2>
+We take the substance to have the shape of a sphere of radius $r$, which is not too small
+<ul>
+    <li>$N(t)=N(0)\mathrm{e}^{-\lambda t}$ the number of atoms that have not decayed up to time $t$.</li>
+    <li>$N(t+h)-N(t) \approx \alpha N(t)h-\dfrac{\beta}{r}N(t)h$, where $\alpha, \beta$ depend only on the substance.</li>
+    <li>$N(t)=N(0)\mathrm{e}^{(\alpha-\frac{\beta}{r})t}$.</li>
+</ul>
+Providing $n$ of neutrons per unit time.$N(t)=$ 
+<ul>
+    <li>$\begin{cases} N_0\mathrm{e}^{(\alpha-\beta/r)t}-\dfrac{n}{\alpha-\beta/r}[1-\mathrm{e}^{(\alpha-\beta/r)t}] & \alpha-\beta/r \ne 0 \\ N_0+nt & \alpha-\beta/r = 0 \end{cases}$</li>
+    <li>$\begin{cases} \alpha-\beta/r > 0\text{(supercritical)} & \text{an explosion occurs} \\ \alpha-\beta/r < 0 \text{ (precritical}) & N(t)=\dfrac{n}{\beta/r-\alpha}\end{cases}$</li>
+</ul>
+<h2>Work and Energy</h2>
+<ul>
+    <li>$\dfrac{mv^2}{2}+\dfrac{kx^2}{2}=K(t)+U(x(t))=E$</li>
+    <li>$\dfrac{ds}{dt}=\pm \sqrt{2(E-U(s))}$.</li>
+    <li>Pendulum, with radius $R$, length $s$ is measured from the lowest point $O$ and a given initial angle of displacement $-\varphi_0$.</li>
+    <li>$T=4\sqrt{\dfrac{R}{g}}\displaystyle{\int_{0}^{\frac{\pi}{2}}\dfrac{\mathrm{d}t}{\sqrt{1-k^2 \sin^2 \theta}}}$.</li>
+    <li>$k^2=\sin^2 \dfrac{\varphi_0}{2}, \sin \theta=\dfrac{\sin (\varphi/2)}{\sin (\varphi_0 /2)}$.</li>
+    <li>Set $\varphi_0$ is small, $T\approx 2\pi \sqrt{\dfrac{R}{g}}$.</li>
+</ul>
+</body></html>

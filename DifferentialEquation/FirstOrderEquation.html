@@ -1,0 +1,65 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$']]},messageStyle: "none"});</script>
+<style> 
+    ol {margin-top: 5px; margin-bottom:5px; margin-left:42px; padding:0px;}
+    ul{margin-top: 5px; margin-bottom:5px; margin-left:38px; padding:0px;}
+    p{margin:1px;padding:0;}
+    h2{margin-top:8px; margin-bottom:8px; padding:0px;}
+    html {font-size: 40px;}</style>
+<title>DifferentialEquation-First Order Equation</title>
+</head><body>
+    <a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+    <a href="FirstOrderEquation.html">First Order Equation</a>
+<h2>Exact Equation</h2>
+Assume the functions we discuss are continuous.
+<ul>
+    <li>Exact equation: $P(x,y){\rm d}x+Q(x,y){\rm d}y = {\rm d}\Phi(x)$.</li>
+	<p><span style="background-color:lightgray;">If $\dfrac{\partial P}{\partial y},\dfrac{\partial Q}{\partial x} \in C^0$, then $\exists \Phi(x) \Leftrightarrow \dfrac{\partial P}{\partial y} \equiv \dfrac{\partial Q}{\partial x}$.</span></p>
+    <li>Variable separation: $P(x)=X_1(x)Y_1(x), Q(x)=X_2(x)Y_2(x)$.</li>
+    <li>Homogeneous factor: $y=z^{\alpha}\Rightarrow \mu=\dfrac{1}{xP+yQ}$ or $z=ux$.</li>
+    <li>Linear: $\dfrac{{\rm d}y}{{\rm d}x}+p(x)y=q(x),\displaystyle{y={\rm e}^{-\int p(x){\rm d}x}(C+\int q(x) {\rm e}^{\int p(x) {\rm d}x}\mathrm{d}x)}$.</li>
+    <li>Bernoulli: $\dfrac{{\rm d}y}{{\rm d}x}+p(x)y = q(x)y^n,z=y^{1-n}$.</li>
+    <li>$\mu P{\rm d}x+\mu Q{\rm d}y={\rm d}F,\begin{cases}G(x)=\frac{1}{Q}\left(\frac{\partial P}{\partial y}-\frac{\partial Q}{\partial x}\right) \\ G(y)=\frac{1}{P}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\end{cases}, \mu(\cdot)={\rm e}^{\int G(\cdot){\rm d}\cdot}$.</li>
+    <li>$\mu_1P{\rm d}x+\mu_1 Q{\rm d}y={\rm d}F_1 \Leftrightarrow \exists g(\cdot) \ne 0 \text{ is devirable},\mu_1=\mu g(F)$.</li>
+</ul>
+<h2>Initial Value Problem</h2>
+$\quad y^{\prime}(x)=f(x,y), y(x_0)=y_0, f(x,y) \in C^0(R):\overline{U}(x_0,a)\times \overline{U}(y_0,b)\quad (*)$, $\quad h=\min\{a,\dfrac{b}{M}\}, M>\max\limits_{(x,y)\in R}|f(x,y)|,G$ is a domain.
+Existence and Uniqueness
+<ol>
+    <li>Peano:  has a solution on $[x_0-h,x_0+h]$, given by Euler polygons.</li>
+	<p><span style="background-color:lightgray;">$\varphi_n(x)=y_0+\sum\limits_{k=0}^{s-1}f(x_k,y_k)(x_{k+1}-x_k)+f(x_s,y_s)(x-x_s),x_s < x \le x_{s+1}$.</span></p>
+    <li>Picard: $f$ is Lipschitz continuous in $y$, $(*)$ has a unique solution.</li>
+	<p><span style="background-color:lightgray;">Picard iteration: $\displaystyle{\varphi_0(x)=y_0, \varphi_{n+1}(x)=y_0+\int_{x_0}^x \varphi_n(x)\mathrm{d}x}$.</span></p>
+    <li>Osgood: there is at most one solution of $(*)$, if $F(r)>0 \in C^0(0,r_1),$ $ \displaystyle{\int_0^{r_1}F(r)=\infty}, |f(x,y_1)-f(x,y_2)|\le F(|y_1-y_2|)$.</li>
+</ol>
+Existence interval
+<ul>
+    <li>Integral curve of $(*)$ in a domain $G$ can extend to its boundary.</li>
+    <li>$f \in C^0((\alpha,\beta)\times \mathbb{R})$, $|f(x,y)| \le |A(x)||y|+|B(x)|$, $A (x),B(x) \in C^0 $, the maximum existence of any solution is $(\alpha,\beta)$</li>
+</ul>
+Comparison
+<ul>
+    <li>$|x-x_0|\le \sigma < h, (*)$ has a maximal and minimal solution.$\dfrac{\mathrm d y}{\mathrm d x}=f(x,y)+\varepsilon_m$.</li>
+    <li>In $G$ with $(*), f_1(x,y) < f_2(x,y),(\varphi_1(x)-\varphi_2(x))(x-x_0) < 0,x \ne x_0$.</li>
+    <li>All strict inequality can be changed to nonstict if strict $\varphi(x)$ to right minimal solution and left maximal solution.</li>
+</ul>
+<h2>Singular solution</h2>
+<ul>
+    $p=y^{\prime},x \in J, F(x,\varphi,\varphi^{\prime})=0$, on which $F(x,y,p)$ has a solution different on each deleted neighborhood and tangent to $y=\varphi(x)$
+    <li>(Clairaut)$y=xp+f(p), y=Cx+f(C),y=-f^{\prime}(p)p+f(p)$.</li>
+    <li>(necessory)$F$ is $C^0$ to $x$, $C^1$ to $y, p, F(x,\varphi,\varphi^{\prime})\equiv 0, F_p^{\prime}(x,\varphi,\varphi^{\prime})\equiv 0$.</li>
+    <li>(sufficient)$F\in C^2(G), F^{\prime}_y(x,\varphi,\varphi^{\prime})\ne 0 , F^{\prime\prime}_{pp}(x,\varphi,\varphi^{\prime}) \ne 0$.</li>
+</ul>
+<h2>Gronwall Inequality</h2>
+<ul>
+    Let $I$ denote $[a,\infty),[a, b],[a, b),a < b, \beta,u \in C^0(I)$.
+    <li>In $I^0, u$ is differentiable, $u'(t)\leq \beta (t)u(t)$, then $u(t)\leq u(a){\rm e}^{\int _{a}^{t}\beta (s)\,{\mathrm  {d}}s}$, $\forall t \in I$.</li>
+    <li>The negative part of $\alpha$ is integrable on every closed and bounded subinterval of $I$.
+        <ol>
+            <li>If $\beta$ is non-negative and if $u$ satisfies the integral inequality, $u(t)\leq \alpha (t)+\int _{a}^{t}\beta (s)u(s)\,{\mathrm  {d}}s$,$\forall t\in I$, then $u(t)\leq \alpha (t)+\int _{a}^{t}\alpha (s)\beta (s){\rm e}^{\int _{s}^{t}\beta (r)\,{\mathrm  {d}}r}{\mathrm  {d}}s, t\in I$.</li>
+            <li>If, in addition, the function $\alpha$ is non-decreasing, then $u(t)\leq \alpha (t){\rm e}^{\int _{a}^{t}\beta (s)\,{\mathrm {d}}s}, t\in I$.</li>
+        </ol>
+    </li>
+</ul>
+</body></html>

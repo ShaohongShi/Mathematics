@@ -1,0 +1,25 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$']]},messageStyle: "none"});</script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS": { linebreaks: { automatic: true } },SVG: { linebreaks: { automatic: true } }});</script>
+<style> 
+    ol {margin-top: 5px; margin-bottom:5px; margin-left:52px; padding:0px;}
+    ul{margin-top: 5px; margin-bottom:5px; margin-left:38px; padding:0px;}
+    p{margin:1px;padding:0;}
+    h3{margin-top:8px; margin-bottom:8px; padding:0px;}
+    html {font-size: 40px;}</style>
+<title>Abstract Algebra-Group Theory</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="GroupTheory.html">Group Theory</a>
+    <a href="SpecialGroups.html">Special Groups</a>
+<h3>Homomorphism</h3>
+<ul>
+    <li>If $\varphi \in \text{Hom}(G_1,G_2)$, then $\varphi(1)=1,\varphi(a^{-1})=\varphi(a)^{-1}, \operatorname{im} \varphi \le G_2, \ker\varphi \trianglelefteq G_1$</li>
+    <li>If $\varphi : G_1 \twoheadrightarrow G_2$, then $\phi(H)=\varphi(H)$ is a bijective correspondence between $\{H \le G_1: H \supset \ker\varphi\}$ and $\{H \le G_2\}$,  and if $H \trianglelefteq G_1, \phi(H) \trianglelefteq G_2$.</li>
+    <li>If $\varphi: G_1 \twoheadrightarrow G_2$, then $G_1/\ker\varphi \cong G_2$.</li>
+    <li>Inner isomorphism: $\sigma_g(a)=gag^{-1}$</li>
+    <li>$\operatorname{Inn}(G)=\operatorname{im}\{\varphi:G \to \operatorname{Aut}(G),g \mapsto \sigma_g\}\trianglelefteq G$.</li>
+    <li>$Z(G)=\ker\{\varphi:G \to \operatorname{Aut}(G),g \mapsto \sigma_g\}\trianglelefteq G$.</li>
+</ul>
+</body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+    ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+    p{margin:1px;padding:0;}
+    html {font-size: 28px;}</style>
+<title>Foundation-Axioms</title>
+</head><body>
+    <a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+    <a href="NumericalSeries.html">Numerical Series</a>
+    <a href="PowerSeries.html">Power Series</a>
+<h2>Definition</h2>
+<ul>
+    <li>Infinite series: $\sum\limits_{n=1}^{\infty}a_n:=\lim\limits_{n \to \infty } \sum\limits_{k=1}^na_k$.</li>
+    <li>Absolutely convergent: \sum\limits_{n=1}^{\infty}|a_n|$ converges.</li>
+    <li>Cauchy: $\sum\limits_{n=1}^{\infty}a_n$ converges if $\forall \varepsilon > 0,\exists N \in \mathbb{N}, \forall m>n>N, \sum\limits_{i=n}^{m}a_n< \varepsilon$.</li>
+    <li>Comparison: $\exists N, \forall n > N, 0 < a_n < b_n$,</li>
+        <p><span style="background-color:lightgray;">$\sum\limits_{n=1}^{\infty}b_n$ converges $\Rightarrow \sum\limits_{n=1}^{\infty}a_n$ converges.</span></p>
+        <p><span style="background-color:lightgray;">$\sum\limits_{n=1}^{\infty}a_n$ diverges $\Rightarrow \sum\limits_{n=1}^{\infty}b_n$ diverges.</span></p>
+    <li>$\alpha=\begin{cases} \limsup\limits_{n \to \infty}\sqrt[n]{|a_n|}(Cauchy) \\ \lim\limits_{n \to \infty}\left| \dfrac{a_{n+1}}{a_n}\right|(d'Alembert)\end{cases}$,then $\sum\limits_{n \to \infty} a_n $ absolutely converges when $\alpha >1$ and diverges when $\alpha < 1$</li>
+    <li>Integral: $f(x)>0, \downarrow,\mathcal{R}$ on each closed interval of $[1,+\infty)$, then $\sum\limits_n^{+\infty}f(n)$ and $\displaystyle{\int_1^{+\infty}f(x)\mathrm{d}x}$ either both converge or both diverge.</li>
+</ul>
+</body></html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$']]},messageStyle: "none"});</script>
+<style> 
+    ol {margin-top: 5px; margin-bottom:5px; margin-left:42px; padding:0px;}
+    ul{margin-top: 5px; margin-bottom:5px; margin-left:38px; padding:0px;}
+    p{margin:1px;padding:0;}
+    h2{margin-top:8px; margin-bottom:8px; padding:0px;}
+    html {font-size: 40px;}</style>
+<title>Differential-Differential Theorems</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="NumericalSequence.html">Numerical Sequence</a>
+	<a href="Real-valueFunction.html">Real-Value Function</a>
+    <a href="DifferentialTheorems.html">Differential Theorems</a>
+    <a href="Application.html">Applicatioon</a>
+<h2>Derivative Prosperity</h2>
+<ul>
+	<li>Darboux: $f \colon [a,b] \to \mathbb{R}$ is differentiable, then $f^{\prime}$ has the intermediate value property.</li>
+	<li>Derivative limit: $f$ is differentiable on $(a,b)$ and right-continuous at $a$, if $\lim\limits_{x \to a}f^{\prime}(x)=L$, then $f$ is right derivative at $a$ and $f^{\prime}_+(a)=L$.</li>
+</ul>
+<h2>Mean Value Theorem</h2>
+$f(x),g(x)$ is continuous on $[a,b]$, differentiable on $(a,b)$, $g^{\prime}(x)\ne 0$
+<ul>
+	<li>Rolle: If $f(a)=f(b), \exists \xi \in (a,b), f^{\prime}(\xi)=0$.</li>
+	<li>Largrange: $\exists \xi \in (a,b), f^{\prime}(\xi)=\dfrac{f(a)-f(b)}{a-b}$.</li>
+	<li>Multivariable: $f:G \to \mathbb{R}, G \subset \mathrm{R}^m$, and let the closed line segment $[x, x+h] \subset G$. If $f$ is continuous on $[x, x+h]$ and differentiable on $(x, x+h)$, then $\exists \xi \in (x, x+h), f(x+h)-f(x)=f^{\prime}(\xi)h$.</li>
+	<li>Cauchy $\exists \xi \in (a,b), \dfrac{f^{\prime}(\xi)}{g^{\prime}(\xi)}=\dfrac{f(b)-f(a)}{g(b)-g(a)}$.</li>
+</ul>
+<h2>L'Hospital Theorem</h2>
+$f(x),g(x)$ is differentiable on $U(x_0,\varepsilon)$(it can be $\infty$) with $g^{\prime}(x)\ne 0$, $\lim\limits_{x \to x_0}\dfrac{f^{\prime}(x)}{g^{\prime}(x)}=l$, $l$ can be $\infty, \pm\infty$
+<ul>
+	<li>$\lim\limits_{x \to x_0}f(x)=\lim\limits_{x \to x_0}g(x)=0$, then $\lim\limits_{x \to x_0}\dfrac{f(x)}{g(x)}=l$.</li>
+	<li>$\lim\limits_{x \to x_0}g(x)=\infty$, then $\lim\limits_{x \to x_0}\dfrac{f(x)}{g(x)}=l$.</li>
+</ul>
+<h2>Taylor's Formula</h2>
+<ul>
+	<li>$f:U(x_0) \to \mathbb{R} \in C^m(U(x_0 ))$ is defined in $U(x_0 ) \subset \mathbb{R}^m $ and the closed interval $[x_0, x_0+h]$ is completely contained in $U(x_0)$, then $f(x_0+h)=\sum\limits_{k=0}^m \dfrac{1}{k!}\mathrm{d}^k f(x_0)+o(|h|^{m+1})$.</li>
+	<li>If $f \in C^{m+1}(U(x_0))$, then $f(x_0+h)=\sum\limits_{k=0}^m \dfrac{1}{k!}\mathrm{d}^k f(x_0)+\dfrac{1}{(m+1)!}\mathrm{d}^{m+1} f(x_0+\theta h), 0 < \theta < 1$.</li>
+	<li>A function $f$ is $n$th order differentiable at $x_0$, $p_n(x)=\sum\limits_{n=0}^n \dfrac{f^{(n)}(x)}{n!}(x-x_0)^n$, $\forall p(x) \ne p_n(x)$,  $\deg {p(x)} \le n$, $\exists \delta>0$, $\forall |x-x_0|<\delta$, $|f(x)-p_n(x)| \le |f(x)-p(x)|$. That equals $f(x)-p_n(x)=R_n(x)=o((x-x_0)^n)$.</li>
+</ul>
+<h2>Implicit Function Theorem</h2>
+$F \colon U \to \mathbb{R}^m \in C^{(p)}(U(\boldsymbol{x_0}, \boldsymbol{y_0}),\mathbb{R}^{n+m}), p \ge 1$, $F(\boldsymbol{x}_0, \boldsymbol{y}_0) = \boldsymbol{0}$, $J_{F, \boldsymbol{y}}(\boldsymbol{x},\boldsymbol{y}) = \left[\dfrac{\partial F_i}{ \partial y_j}(\boldsymbol{x}, \boldsymbol{y})\right]$ is invertible, then there exists an $m+n$ dimension interval $I_x^m \times I_y^n \subset U$, 
+$$I_x^m=\{|\boldsymbol{x}-\boldsymbol{x}_0|< \alpha\}, I_{y}^n=\{|\boldsymbol{y}-\boldsymbol{y}_0|< \alpha\}$$, 
+and such that there exists $f \in C^{(p)}(I_x^m,I_y^n)$ such that 
+$$f(\boldsymbol {x})=\boldsymbol {y} \Leftrightarrow F(\boldsymbol {x})=\boldsymbol {y}, \forall (\boldsymbol {x},\boldsymbol {y}) \in I_x^m \times I_y^n$$
+Moreover, the partial derivatives of $f$ in $U$ are given by 
+$$\boldsymbol{J}_f(\boldsymbol{x})=-[\boldsymbol{J}_{F,\boldsymbol{y}}(\boldsymbol{x},f(\boldsymbol{x}))]^{-1} \boldsymbol{J}_{F,\boldsymbol{x}}(\boldsymbol{x},f(\boldsymbol{x}))$$
+<h2>Inverse Function</h2>
+$f \in C^{(p)}(G;\mathbb{R}^m), p \ge 1, G$ is a domain of $\mathbb{R}^m$, $y_0=f(x_0), x_0 \in G, f^{\prime}(x_0)$  is invertible, then there exists a neighborhood $U(x_0) \subset G$ and $V(y_0)$ such that $f:U(x_0) \to V(y_0)$ is a $C^{(P)}$-diffeomorphism. 
+
+Moreover, if $x \in U(x_0)$ and $y=f(x) \in V(y_0)$, then $(f^{-1})^{\prime}(y)=(f^{\prime}(x))^{-1}$.
+
+<h2>Surface Rank</h2>
+<ul>
+	<li>If $f \in C^{(P)}(U;\mathbb{R}^n), p \ge 1, U=U(x_0) \subset \mathbb{R}^m $, and $f$ has the same rank $k$ at every point $x \in U$, then there exist neighborhoods $O(x_0)$ and $O(y_0)$ of $y_0=f(x_0)$ and diffeomorphisms $u=\phi(x),v=\psi(y)$ of those neighborhoods, of class $C^{(P)}$, such that $v=\psi \circ f \circ \phi^{-1}(u), (u^1, \cdots ,u^k, \cdots ,u^m) \mapsto (u^1, \cdots ,u^k,0, \cdots ,0)$ in the neighborhood $O(u_0)=\phi(O(x_0 ))$ of $u_0=\phi(x_0)$.</li>
+	<li>Local Resolution of a Diffeomorphism: If $f : G \to \mathbb{R}^m$ is a diffeomorphism of an open set $G \subset \mathbb{R}^m$ , then for any point $x_0 \in G$ there is a neighborhood of the point in which the representation $f=g_1 \circ \cdots \circ g_n$ holds, where $g_1, \cdots ,g_n$ are elementary diffeomorphisms(under which only one coordinate is changed).</li>
+	<li>$S \subset \mathbb{R}^n$ is a $k$-dimensional smooth surface(submanifold) in $\mathbb{R}^n$ if $\forall x_0 \in S$, $\exists U(x_0) \in \mathbb{R}^n$ and a diffeomorphism $\phi : U(x_0) \to I^n =\{t \in \mathbb{R}^n| |t^i| < 1, i=1, \cdots, n\}$ under which the image of $S \cap U(x_0)$ is the portion of the $k$-dimensional plane in $\mathbb{R}^n$ defined by $t^{k+1} =\cdots= t^n = 0$ lying inside $I^n$.</li>
+	<li>Tangent space: If a $k$-dimensional surface $S \subset \mathbb{R}^n$, $l \le k \le  n$ , is defined parametrically in a neighborhood of $x_0 \subset S$ by means of a smooth mapping $(t_1, \cdots, t_k) = t \mapsto x= (x_1, \cdots, x_n)$ such that $x_0 = x(0)$ and the matrix $x^{\prime}(t)$ has rank $t$, then the $k$-dimensional surface in $\mathbb{R}^n$ defined parametrically by the matrix equality $x-x_0=x^{\prime}t$ is called the tangent plane(space) to the surface $S$ at $x_0 \in S$.</li>
+</ul>
+</body></html>

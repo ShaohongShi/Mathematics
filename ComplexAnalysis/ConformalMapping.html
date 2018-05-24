@@ -1,0 +1,56 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$']]},messageStyle: "none"});</script>
+<style> 
+    ol {margin-top: 5px; margin-bottom:5px; margin-left:42px; padding:0px;}
+    ul{margin-top: 5px; margin-bottom:5px; margin-left:38px; padding:0px;}
+    p{margin:1px;padding:0;}
+    h2{margin-top:8px; margin-bottom:8px; padding:0px;}
+    html {font-size: 40px;}</style>
+<title>ComplexAnalysis-ConformalMapping</title>
+</head><body>
+    <a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+    <a href="AnalyticFunction.html">Analytic Function</a>
+    <a href="ConformalMapping.html">Conformal Mapping</a>
+<h2>Analytic homeomorphism</h2>
+        $Theorem \quad f(z) \ne C \in \text{Hol}(\Omega)$
+$1^0 \quad f(z)=\sum\limits_{n=0}^{+\infty}a_n(z-z_0)^n=f(z_0)+[(z-z_0)g(z)]^m,g(z) \ne 0 \in \text{Hol}(U(z_0))$
+$\star$ Prove it to be both closed and open in the connected open set $\Omega$.
+$2^0 \quad \text{zero points of $f(z)$ in $\Omega$ are isolated}$
+$3^0 \quad f(z) \text{ maps open sets in $\Omega$ to open sets, thus } |f(z)| \text{ has no maximum in } \Omega$
+$\quad \omega=f(z): \Omega_1 \to \Omega_2 \text{ is univalent},f(z) \in \text{Hol}(\Omega_1),f^{-1}(\omega) \in \text{Hol}(\Omega_2)$
+$1^0 \quad \begin{matrix} f(z) \in \text{Hol}(\Omega_1),\text{ univalent} \\ f(z) \in \text{Hol}(\Omega_1),f^{\prime}(z) \ne 0 \end{matrix} \Rightarrow f(z) \text{ is an analytic homeomorphism}$
+$2^0 \quad \text{holomorphic tangent map} \quad f^* : T^{\prime}_{z_0} \to T^{\prime}_{f(z_0)}, \bold{\alpha} \mapsto f^{\prime}(z_{0}) \bold{\alpha}$
+ $3^0 \quad \text{arg}f^{\prime}(z_0)=\text{arg}(f^{\prime}(z_0)\alpha)-\text{arg}\alpha, |f^{\prime}(z_0)|^2=\det J_f(x_0,y_0)$
+        Möbius transformation
+        $L(z):f(z)=\dfrac{az+b}{cz+d} \cong PSL_2(\mathbb{C})=SL_2(\mathbb{C})/\{\pm I_2\}$
+$\text{determine} \quad z_i, w_i \in \overline\mathbb{C}$ are distinct respectively, $\exists ! L(z)$, s.t., $L(z_i)=w_i, i=1,2,3$.
+$\text{Elementary} \quad L(z)=e^{i\theta}z,L(z)=rz,L(z)=z+z_0,L(z)=\dfrac{1}{z}$
+$\text{propsperity} \quad \text{Concircular,keeps symmetry and cross-ratio}$
+$D(0,1) \to D(0,1): L(z)=e^{i\theta}\dfrac{z-a}{1-\bar{a}z}$
+${\rm Im}z>0 \to D(0,1): L(z)=e^{i\theta}\dfrac{z-a}{z-\bar a}({\rm Im}a>0)$
+$\mathbb{R} \to \mathbb{R}: GL_2(\mathbb{R})$
+${\rm Im}z >0 \to {\rm Im}z >0: SL_2(\mathbb{R})$
+        Mappings of multivalued function
+        $\text{single valued analytical branch}$
+	$F(z)$ is a multivalue function on $\Omega, f(z)$ is analytic and $f(z) \in F(z)$ on $\Omega$.
+	Logarithmic branching point
+	Algebraic branching point
+$\text{logarithmic function}$
+	$\ln z = \ln{|z|}+i(\arg z+2k \pi)$, $k\in \mathbb{Z}, z \ne 0$.
+	$\Omega_k=\{x+\mathrm {i} y \mid x \in \mathbb{R}, y \in (2k\pi,(2k+2)\pi)\}$
+	$\ln z: \theta=\varphi \to \text{Im} z=\varphi$
+	$e^z : x=a \to |z|=e^a$
+$\text{power function}$
+	$z^n=e^{n \ln z},  z \ne 0$.
+	$\Omega_k=\{z \in \mathbb{C}-\{0\} \mid \arg z \in (\frac{2(k-1)\pi}{n}, \frac{2k\pi}{n})\}$, $k=1,2,\cdots,n$.
+	$z_1^{z_2z_3}=\left(z_1^{z_2}\right)^{z_3} \iff z_3 \in \mathbb{Z}$
+$\text{Inverse triangle}$
+	$\arcsin z=\dfrac{1}{i} \ln{(iz+\sqrt{1-z^2})},\arccos z=\dfrac{1}{i} \ln{(z+\sqrt{z^2-1})}$
+	$\arctan z=\dfrac{1}{2i}\ln \dfrac{1+iz}{1-iz}, \mathrm{arctanh}z=\dfrac{1}{2}\ln \dfrac{1+z}{1-z}$
+$\text{Rokovosky function}$
+$f(z)=\dfrac{1}{2}(z+\dfrac{1}{z}), \bar{\mathbb{C}}$, and $f(z_1)=f(z_2) \iff z_1z_2=1$.
+	$\Omega_1=\{D(0,1)\}$, $\Omega_2=\{\bar{\mathbb{C}}-D(0,1)\}$, $\Omega_3=\{\mathrm{Im}z>0\}$,$\Omega_4=\{\mathrm{Im}z < 0\}$.
+        Other mappings
+        $\text{Upper } D(0,1) \to \text{Im}z>0 \quad w=\left(\dfrac{z+1}{z-1}\right)^2$
+$\text{Upper plane } \to D(0,1) \quad w=\dfrac{z-i}{z+i}$

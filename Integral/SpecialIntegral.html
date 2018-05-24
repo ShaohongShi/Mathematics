@@ -1,0 +1,49 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+	ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+	p{margin:1px;padding:0;}
+	html {font-size: 28px;}</style>
+<title>Differential-Real-Value Function</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="IndefiniteIntegral.html">Indefinite Integral</a>
+	<a href="RiemannIntegral.html">Riemann Integral</a>
+    <a href="SpecialIntegral.html">Special Integral</a>
+    <a href="Application.html">Applicatioon</a>
+\mydf $g(x)=g(x+T)$
+\my $\displaystyle{\lim\limits_{p\to +\infty}{\int_a^bf(x)g(px)\mathrm{d}x}=\underbrace{ \frac{1}{T}\int_0^Tg(x)\mathrm{d}x}_{\text{integral average value}}\int_a^bf(x)\mathrm{d}x}$
+\myd $\displaystyle{\int_0^{\pi}xf(\sin x)\mathrm{d}x=\frac{\pi}{2}\int_0^{\frac{\pi}{2}}f(\sin x)\mathrm{d}x}, f\in C[0,1]$.
+\myd $\displaystyle{\int_0^{\frac{\pi}{2}}\dfrac{\mathrm{d}x}{1+\tan^a x}=\int_0^{\frac{\pi}{2}}\dfrac{\mathrm{d}x}{1+\cot^ax}=\dfrac{\pi}{4}}$
+\myd $\int_0^{\frac{\pi}{2}}\sin^n x \mathrm{d}x=\begin{cases}
+	\dfrac{(2k-1)!!}{(2k)!!}\dfrac{\pi}{2},n=2k \\
+	\dfrac{(2k)!!}{(2k+1)!!},n=2k+1\end{cases}$
+\myd Wallis formula $\lim\limits_{n\to\infty}{{\left(\dfrac{(2k)!!}{(2k-1)!!}\right)^2\dfrac{1}{2k+1}}}=\dfrac{\pi}{2}$
+%Dirichlet积分 \int_0^{\pi{}}\frac{\sin{\frac{\left(2n+1\right)x}{2}}}{2\sin{\frac{x}{2}}}dx=\int_0^{\pi{}}\left(\frac{1}{2}+\sum_{k=1}^n\cos{kx}\right)dx=\frac{\pi{}}{2}
+%双重积分 f\in{}C\left[0,+\infty{}\right),a>0,\int_0^a\left(\int_0^xf\left(t\right)dt\right)dx=\int_0^af(x)(a-x)dx
+\myd Improper integral If $f(x) \in \mathcal{R}[a, b]$
+$$\displaystyle{\int_{a}^{\omega}f(x)\mathrm{d}x:=\lim\limits_{b \to \omega^-}\int_a^b f(x)\mathrm{d}x}$$
+\myf $\omega$ is a singularity if $\omega=\pm \infty$ or $f(x)$ is unbounded at $\omega \in \mathbb{R}$
+$$\displaystyle{\int_{-\infty}^{+\infty}f(x)\mathrm{d}x:=\int_{-\infty}^{c} f(x)\mathrm{d}x}+\int_c^{+\infty}f(x)\mathrm{d}x$$
+\mydf Cauchy principle value 
+$$P.V.\displaystyle{\int_{-\infty}^{+\infty}f(x)\mathrm{d}x:=\lim\limits_{X \to +\infty}\int_{-X}^{X} f(x)\mathrm{d}x}$$
+\myd If $c$ is the only singularity in $(a,b)$ 
+$$\displaystyle{\int_{a}^{b}f(x)\mathrm{d}x:=\int_{a}^{c}f(x)\mathrm{d}x+\int_{c}^{b}f(x)\mathrm{d}x}$$
+\mytf Cauchy convergence, comparison, absolute convergence.
+\myt Abel-Dirichlet test if $f,g \in \mathcal{R}[a,X], \forall X>a$, $\int_a^X f(x)\mathrm{d}x$ is bounded and $g$ is monotonic and bounded, 
+\myn Abel if $\int_a^X f(x)\mathrm{d}x$ converges
+\myn Dirichlet $g(x)$ coverges to $0$ as $X$ to $\infty$.
+<h2>Euler Integral</h2>
+<ul>
+	<li>$\Gamma(x)=\displaystyle{\int_{0}^{+\infty}t^{x-1}e^{-t}\mathrm{d}t}=\displaystyle{\int_{0}^{+\infty}t^{2x-1}e^{-t^2}\mathrm{d}t}$</li>
+	<li>$B(P,Q)=\displaystyle{\int_{0}^{1}x^{P-1}(1-x)^{Q-1}\mathrm{d}x},P>0,Q>0$</li>
+	<li>$\Gamma(x+1)=x\Gamma(x),\Gamma(n)=(n-1)!$</li>
+	<li>$\Gamma(x)\Gamma(1-x)=\dfrac{\pi}{\sin \pi x}, \Gamma(\dfrac{1}{2})=\int_{-\infty}^{+\infty}e^{-t^2}\mathrm{d}t=\sqrt{\pi}$</li>
+	<li>$B(P,Q)=\dfrac{P-1}{P+Q-1}B(P-1,Q)=\dfrac{\Gamma(P)\Gamma(Q)}{\Gamma(P+Q)}$</li>
+</ul>
+</body></html>

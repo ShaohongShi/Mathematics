@@ -1,0 +1,62 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$']]},messageStyle: "none"});</script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS": { linebreaks: { automatic: true } },SVG: { linebreaks: { automatic: true } }});</script>
+<style> 
+    ol {margin-top: 5px; margin-bottom:5px; margin-left:52px; padding:0px;}
+    ul{margin-top: 5px; margin-bottom:5px; margin-left:38px; padding:0px;}
+    p{margin:1px;padding:0;}
+    h3{margin-top:8px; margin-bottom:8px; padding:0px;}
+    html {font-size: 40px;}</style>
+<title>Foundation-Axioms</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="Axioms.html">Axioms</a>
+    <a href="MapRelation.html">Map Relation</a>
+    <a href="Cardinality.html">Cardinality</a>
+    <a href="SymbolsAlgebra.html">Symbols in Algebra</a>
+    <a href="SymbolsTopology.html">Symbols in Topology</a>
+    <a href="SymbolsAnalysis.html">Symbols in Analysis</a>
+    <a href="Others.html">Others</a>
+<h3>Zermelo-Fraenkel Axioms</h3>
+ All formulations of ZFC are expressed in the symbolism of first order logic, implying that at least one set exists. Suppose $X,Y$ are arbitrary sets, 
+ <ol>
+ 	<li>Extensionality: $\forall x (x \in X \Leftrightarrow x \in Y) \Rightarrow X=Y$</li>
+ 	<li>Regularity: $\exists x_1 \in X \Rightarrow \exists x_2 (x_2 \in X \land \neg \exists z (z \in x_2 \land z \in X))$
+	<p><span style="background-color:lightgray;">No set is an element of itself and that every set has an ordinal rank.</span></p></li>
+ 	<li>Schema of specification: $\exists \{x \in X : \phi(x)\}$</li>
+ 	<p><span style="background-color:lightgray;">The empty set now exists and is unique.</span></p>
+	<li>Pairing: $\exists Z (X \in Z \land Y \in Z)$</li>
+ 	<p><span style="background-color:lightgray;">Proved by 6 and 7</span></p>
+	<li>Union: $\exists Z(Z=\cup X=\{z: \exists x \in X \land z \in x\})$</li>
+	<li>Replacement: the image of $X$ under any definable function will also fall inside a set.</li> 
+	<p><span style="background-color:lightgray;">Thus we get domain, range and image.</span></p>
+	<li>Infinity: there exists a set having infinitely many members.</li>
+	<p><span style="background-color:lightgray;">The minimal set $X$ satisfying the axiom of infinity is the von Neumann ordinal($0=\emptyset,n+1=n \cup \{n\}$).</span></p>
+	<li>Power set: For any set $X$, there is a set that contains every subset of $X$, denoted by $\mathcal{P}(x)$</li>
+</ol>
+<h3>Axiom of Choice</h3>
+<ol>
+ 	<li>Given a collection $\mathcal{A}$ of disjoint nonempty sets, there exists a set $C$ consisting of exactly one element from each element of $\mathcal{A}$.</li>
+	<li>Zorn's lemma: A partially ordered set in which every chain has an upper bound has a maximal element.</li>
+	<p><span style="background-color:lightgray;">Suppose there exists a poset $P$ such that every totally ordered subset has an upper bound, and every element has a bigger one. For every totally ordered subset $T$ we may then define a bigger element $b(T)$, because T has an upper bound, and that upper bound has a bigger element.Using $b$, define elements $a_0 < a_1 < a_2 < \cdots$ in $p$. There are too many ordinals (a proper class), more than there are elements in any set, and the set P will be exhausted.</span></p>
+	<li>Well-ordered theorem: For any set, there exists an order relation that is a well-ordering.</li>
+	<p><span style="background-color:lightgray;">A well-order on a set $S$ is a total order on $S$ with the property that every non-empty subset of $S$ has a least element in this ordering.</span></p>
+ 	<p><span style="background-color:lightgray;">For any set $X$, by the axiom of choice, there is a function $f$ so that for any nonempty set $Y \subset X, f(Y) \in Y$. By induction on ordinals, define $g$ so that $g(0)=\emptyset$ and $g(\alpha)=f(X- \bigcup_{\beta < \alpha}g(\beta) )$. Then by the replacement and comprehension, the domain of has an upper bound. So $g$ is a function. Now every element of $X$ belongs to the range of $g$. Let $x < y$ if $g^{-1}(x) < g^{-1}(y)$.</span></p>
+ </ol>
+<h3>Peano Axioms</h3>
+<ol>
+<li>Axioms
+ <ol>
+ 	<li>0 is a natural number.</li>
+ 	<li>Equality is reflexive, symmetric, transitive, closed.</li>
+ 	<li>For every natural number $n$, $S(n)$ is a natural number. </li>
+ 	<li>$S$ is an injection.</li>
+ 	<li>There is no natural number whose successor is 0.</li>
+ </ol></li>
+ 	<li>Inductive principle Second $(A \subset \mathbb{Z}_+,\forall n \in Z_+, S_n \subset A) \text{ implies } (n \in A) \implies A=\mathbb{Z}_+$.</li> 
+ 	<li>Well-ordering: $\forall A \in \mathbb{Z}_+,A \ne \emptyset, A$ has a smallest element.</li>
+	<li>Archimedean ordering: $\mathbb{Z}_+$ has no upper bound in $\mathbb{R}$</li> 
+ 	<li>Principle of Recursive Definition $a_0 \in A, F_n$ be the set of all functions $f:\{1, \ldots,n\} \to A$, and $\rho \colon \cup n \in \mathbb{Z}^+ F_n \to A$ be a recursive rule. Then there exists a unique function (recursion formula) $h \colon \mathbb{Z}^+ \to A$ such that $h(1)=a_0$ and for $i>1, h(i)=\rho(h|\{1,...,i−1\}|)$.</li>
+ </ol>
+</body></html>

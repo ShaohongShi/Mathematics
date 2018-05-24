@@ -1,0 +1,37 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+	ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+	p{margin:1px;padding:0;}
+	html {font-size: 28px;}</style>
+<title>Linear Algebra-Vector Space</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="VectorSpace.html">Vector Space</a>
+	<a href="AnalyticGeometry.html">Analytic Geometry</a>
+    <a href="Module.html">Module</a>
+<h2>Affine Geometry</h2>
+<ul>
+	<li>Affine coodinate system: affine frame $\{O;e_1,e_2,e_3\}$, the origin $0$, the coordinate vector $e_1,e_2,e_3$.</li>
+	<li>$\alpha \cdot \beta=|\alpha||\beta|\cos\langle \alpha,\beta \rangle=x_1x_2+y_1y_2+z_1z_2$.</li>
+	<li>$\alpha\times\beta=\left(\begin{vmatrix}y_1 & z_1 \\ y_2 & z_2\end{vmatrix},\begin{vmatrix}z_1 & x_1 \\ z_2 & x_2\end{vmatrix},\begin{vmatrix}x_1 & y_1 \\ x_2 & y_2\end{vmatrix}\right)$ \newline $|\alpha \times \beta|=|\alpha||\beta|\sin\langle \alpha,\beta \rangle, \alpha,\beta,\alpha \times \beta$ consists a right handed system.</li>
+	<li>$(\alpha \times \beta)\times \gamma=(\alpha \cdot \gamma)\beta-(\beta \cdot \gamma)\alpha$ \newline $\alpha \times (\beta \times \gamma)=(\alpha \cdot \gamma)\beta-(\alpha \cdot \beta)\gamma$</li>
+	<li>$(\alpha,\beta,\gamma)=(\alpha \times \beta)\cdot \gamma=(\beta,\gamma,\alpha)=(\gamma,\alpha,\beta)$ \newline $= \begin{bmatrix}x_1 & y_1 & z_1 \\ x_2 & y_2 & z_2 \\ x_3 & y_3 & z_3\end{bmatrix}(e_1,e_2,e_3)$.</li>
+	<li>$(\alpha,\beta,\gamma)>0, \alpha,\beta,\gamma$ consist a right-handed system; $(\alpha,\beta,\gamma) < 0, \alpha,\beta,\gamma$ consist a left-handed system 
+\myt $\alpha \times \beta \cdot \gamma \times \delta=\begin{vmatrix} \alpha \cdot \gamma & \alpha \cdot \delta \\ \beta \cdot \gamma & \beta \cdot \delta\end{vmatrix}$(Lagarange)</li>
+</ul>
+<h2>Complex Number</h2>
+<ul>
+	<li>Parallelogram $\Leftrightarrow |z_1+z_2|^2+|z_1-z_2|^2=2(|z_1|^2+|z_2|^2)$.</li>
+	<li>Equilateral triangle $\Leftrightarrow z_1^2+z_2^2+z_3^2=z_1z_2+z_2z_3+z_3z_1$.</li>	
+	<li>$\triangle z_1z_2z_3 \sim \triangle Z_1Z_2Z_3 \iff \begin{vmatrix}z_1 & Z_1 & 1 \\ z_2 & Z_2 & 1 \\ z_3 & Z_3 & 1 \end{vmatrix}=0$.</li>
+	<li>Concyclic $\Leftrightarrow (z_1,z_2,z_3,z_4)=\dfrac{z_1-z_3}{z_1-z_4} : \dfrac{z_2-z_3}{z_2-z_4} \in \mathbb{R}$</li>
+	<li>Circle $Az\bar{z}+B\bar{z}+\bar{B}z+C=0, A,C \in \mathbb{R}, B \in \mathbb{C},B\bar{B}-AC>0$</li>
+	<li>$z_1,z_2$ is symmtric about $Az\bar{z}+B\bar{z}+\bar{B}z+C=0$, if $Az_1\bar{z_2}+B\bar{z_2}+\bar{B}z_1+C=0$</li>
+</ul>
+</body></html>

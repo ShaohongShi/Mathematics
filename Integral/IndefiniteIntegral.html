@@ -1,0 +1,62 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+	ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+	p{margin:1px;padding:0;}
+	html {font-size: 28px;}</style>
+<title>Differential-Real-Value Function</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="IndefiniteIntegral.html">Indefinite Integral</a>
+	<a href="RiemannIntegral.html">Riemann Integral</a>
+    <a href="SpecialIntegral.html">Special Integral</a>
+    <a href="Application.html">Applicatioon</a>
+<h2>Basic</h2>
+<ul>
+	<li>$\underbrace{F^{\prime}(x)}_{\text{primitive}} = f(x),\displaystyle{\int \underbrace{f(x)\mathrm{d}x}_{\text{differential form}}=F(x)+C}$.</li>
+	<li>Nonelementary: $e^{-x^2}, \dfrac{e^x}{x}, \dfrac{1}{\ln x},\sin{x^2}, \cos{x^2}, \dfrac{\sin x}{x}, \dfrac{\cos x}{x}$.</li>
+	<li>$\dfrac{1}{x} \to \ln{|x|}, x^{\alpha} \to \dfrac{x^{\alpha+1}}{\alpha+1}, a^x \to a^x\ln a$.</li>
+	<li>$\sin x \to -\cos x, \cos x \to \sin x$.</li>
+	<li>$\tan x \to -\ln{|\cos x|}, \cot x \to \ln{|\sin x|}$.</li>
+	<li>$\sec x \to \ln{|\sec x+\tan x|}, \csc x \to \ln{|\csc x-\cot x|}$.</li>
+	<li>$\arcsin x \to x\arcsin x+\sqrt{1-x^2}$.</li>
+	<li>$\arccos x \to x\arccos x-\sqrt{1-x^2}$.</li>
+	<li>$\arctan x \to x\arctan x-\dfrac{1}{2}\ln{(1+x^2)}$.</li>
+</ul>
+<h2>Square</h2>
+<ul>
+	<li>$\dfrac{1}{\sqrt{a^2-x^2}} \to \arcsin{\dfrac{x}{a}}, \dfrac{1}{\sqrt{x^2\pm a^2}} \to \ln{|x+\sqrt{x^2\pm a^2}|}$.</li>
+	<li>$\dfrac{1}{a^2+x^2} \to \arctan{\dfrac{x}{a}}, \dfrac{1}{a^2-x^2} \to \dfrac{1}{2a}\ln{\left\vert\dfrac{a+x}{a-x}\right\vert}$.</li>
+	<li>$\sqrt{a^2+x^2} \to \dfrac{x}{2}\sqrt{a^2+x^2}+\dfrac{a^2}{2}\ln{|x+\sqrt{x^2+a^2}|}$.</li>
+	<li>$\sqrt{a^2-x^2} \to \dfrac{x}{2}\sqrt{a^2-x^2}+\dfrac{a^2}{2}\arcsin\dfrac{x}{a}$.</li>
+</ul>
+<h2>Calculate method</h2>
+<ul>
+	<li>It is linear.</li>
+	<li>$\displaystyle{\int{u(x)v^{\prime}(x)\mathrm{d}x}=\int{u(x)v(x)\mathrm{d}x}-\int{u^{\prime}(x)v(x)}\mathrm{d}x}$.</li>
+	<li>$F(x)=\int{f(u)\mathrm{d}u}+C$ on an interval $I_u$, $u(x):I_x \to I_u \in C^1(I_x)$, then $\int{f(u(x))u^{\prime}(x)\mathrm{d}x}=F(u(x))+C$.</li>
+	<li>In addtional, $u^{\prime}(x) \ne 0$, it can be used inversely.</li>
+</ul>
+<h2>Change of Variable</h2>
+<ul>
+	<li>$\displaystyle{\int{\dfrac{\mathrm{d}x}{{(x+a)}^m{(x+b)}^n}}}, t=\dfrac{x+a}{x+b}$.</li>
+	<li>$y= \sqrt[n]{\dfrac{ax+b}{cx+d}}=t$.</li>
+	<li>$y=\sqrt{x^2+1}=tx+1 \text{ or }tx-1 \text{ or }x-t$.</li>
+	<li>$y=\sqrt{x^2-1}=t(x-1) \text{ or }t(x+1) \text{ or }x-t$.</li>
+	<li>$y=\sqrt{1-x^2}=t(1-x) \text{ or }t(1+x) \text{ or }tx \pm 1$.</li>
+	<li>$y=\sqrt{ax^2+bx+c}=\pm\sqrt{a}x+t, a>0$.</li>
+	<li>$y=\sqrt{ax^2+bx+c}=tx\pm\sqrt{c}, c>0$.</li>
+	<li>$y=\sqrt{a(x-x_1)(x-x_2)}=t(x-x_1)$.</li>
+</ul>
+<h2>Rational Fraction</h2>
+<ul>
+	<li>$\dfrac{P(x)}{Q(x)}=p(x)+\sum\limits_{j=1}^{l}\left( \sum\limits_{k=1}^{k_j}\dfrac{a_{jk}}{(x-x_j)^k} \right)+\sum\limits_{j=1}^{n}\left( \sum\limits_{k=1}^{m_j}\dfrac{b_{jk}x+c_{jk}}{(x^2+p_jx+q_j)^k} \right)$</li>
+	<li>$\displaystyle{\int\dfrac{\left(Ax+B\right)\mathrm{d}x}{x^2+px+q}=\dfrac{A}{2}\ln{\left(x^2+px+q\right)}}+\dfrac{2B-Ap}{\sqrt{4q-p^2}}\arctan\dfrac{2x+p}{\sqrt{4q-p^2}}+C$</li>
+	<li>Ostrogradsky's integration method: $\displaystyle{\int {R(x)\over P(x)}\mathrm{d}x = {T(x)\over S(x)} + \int {X(x)\over Y(x)}\mathrm{d}x}$, $S(x)$ is the greatest common divisor of $P(x)$ and $P^{\prime}(x)$, $P(x)=S(x)Y(x)$.</li>
+</ul>
+</body></html>

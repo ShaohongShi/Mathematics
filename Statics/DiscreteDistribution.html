@@ -1,0 +1,59 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+    ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+    p{margin:1px;padding:0;}
+    html {font-size: 28px;}</style>
+<title>Foundation-Axioms</title>
+</head><body>
+    <a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+    <a href="ProbabilitySpace.html">Probability Space</a>
+    <a href="NumericalCharacteristics.html">Numerical Characteristics</a>
+    <a href="DiscreteDistribution.html">Discrete Distribution</a>
+    <a href="ContinuousDistribution.html">Continuous Distribution</a>
+    <a href="StaticsModel.html">Statics Model</a>
+<h2>Poisson $\mathcal{P}(\lambda)$</h2>
+<ul>
+    <li>Stationary: the distribution of each interval only depends on the length.</li>
+    <li>$P_k(t)=P(k \text{ events in time }t),\sum\limits_{k=0}^{\infty}P_k(t)=1, \lim\limits_{t \to 0}\sum\limits_{k=2}^{\infty}P_k(t)=o(t)$.</li>
+    <li>The number of points in disjoint intervals are independent.</li>
+    <li>$f(k;\lambda)={\dfrac {\lambda ^{k}e^{-\lambda }}{k!}}, \lambda >0, k=0,1, \cdots$.</li>
+    <li>$k$ is the events observed and $\lambda$ the mean of events in interval $t_0$.</li>
+    <li>$EX=\operatorname{var}(X)=\lambda$.</li>
+    <li>$X_1 \sim \mathcal{P} (\lambda_1), X_2 \sim \mathcal{P} (\lambda_2), X_1+X_2 \sim \mathcal{P} (\lambda_1+\lambda_2)$.</li>
+</ul>
+<h2>Binomial $B(n,p)$</h2>
+<ul>
+    <li>$B(n,p): b(k;n,p)=\dbinom{n}{k}p^{k}(1-p)^{n-k}$. When $k=1$, it is Bernoulli distribution.</li>
+    <li>$k$ successes in a sequence of $n$ independent Bernoulli experiments $(1,p)$.</li>
+    <li>$EX=np, \operatorname{var}(X)=npq$.
+    <li>$b(k;n,p_n) \to \dfrac {\lambda ^{k}e^{-\lambda }}{k!}, np_n \to \lambda, n \to \infty$.</li>
+    <li>Maximum: $k=\begin{cases}[(n+1)p] & \text{ if } (n+1)p \notin \mathbb{Z} \\ (n+1)p, (n+1)p-1 & \text{ if } (n+1)p \in \mathbb{Z} \end{cases}$.</li>
+    <li>$X_1 \sim B(n_1,p),X_2 \sim B(n_2,p),X_1+X_2 \sim B(n_1+n_2,p)$.</li>
+</ul>
+<h2>Hypergeometric $H(N,M,n)$</h2>
+<ul>
+    <li>$h_k={\dfrac {{\binom {M}{k}}{\binom {N-M}{n-k}}}{\binom {N}{n}}}, 0 \le k \le n \le N, k\le M$.</li>
+    <li>$N$ is the population size, $M$ is the number of success, $n$ is the number of draws.</li>
+    <li>$EX=\dfrac{nM}{N}$.</li>
+    <li>$h_k\approx\dbinom{n}{k}(\dfrac{M}{N})^k (1-\dfrac{M}{N})^{n-k}, M >> k, N-M >> n-k$.</li>
+</ul>
+<h2>Geometric</h2>
+<ul>
+    <li>$g(k,p)=(1-p)^{k-1}p, k=1,2, \cdots$.</li>
+    <li>$k$ tries before first success in Bernoulli trials with the probability of success $p$.</li>
+    <li>$EX=\dfrac{1}{p}$</li>
+    <li>Memoryless: $X \in \mathbb{Z}^+, P(X=\eta+k|X>\eta)=P(X=k) \Leftrightarrow X \sim g(k,p)$.</li>
+</ul>
+<h2>Other</h2>
+<ul>
+    <li>Pascal: $P(k;r,p)=\dbinom{k-1}{r-1}p^r (1-p)^{k-r}$. The probability of $k$ trials needed to see $r$ successes in a Bernoulli process.</li>
+    <li>Negative binomial: $Nb(l;r,p)=\dbinom{-r}{l}p^r(-q)^l$. The probablity of observing $l$ failures before $r$ success.</li>
+    <li>Banach: $\dbinom{2N-r}{N}\left(\dfrac{1}{2}\right)^{2N-r}$. Two matchboxes originally contained $N$ matches each, the probability that there are exactly $r$ matches in the other box when the first time that the box picked is empty.</li>
+</ul>
+</body></html>

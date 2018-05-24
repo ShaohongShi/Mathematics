@@ -1,0 +1,134 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+	ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+	p{margin:1px;padding:0;}
+	html {font-size: 28px;}</style>
+<title>Linear Algebra-Vector Space</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="VectorSpace.html">Vector Space</a>
+	<a href="AnalyticGeometry.html">Analytic Geometry</a>
+    <a href="Module.html">Module</a>
+<h2>Basis and Dimension</h2>
+$S \subset V$ is the basis of $V$ iff 
+<ul>
+	<li>if $S$ is l.i. and spans $V$</li>
+	<li>$\forall v \in V,v \ne 0$ is an essentially unique linear combination of vectors in $S$.</li>
+	<li>$S$ spans $V$ but $\forall A \subsetneq S$ does not.</li>
+	<li>$S$ is l.i. but $\forall A \subsetneq S$ is not.</li>
+	<li>$V=\bigoplus\limits_{i=1}^n \langle v_i \rangle$ when $S=\{v_1,\cdots,v_n\}$</li>
+</ul>
+$\dim(V)\triangleq \card(\mathscr{B}), \mathscr{B}$ is the basis of $V$, for
+<ul>
+	<li>$I$ be l.i., $I \subset S$ spans $V$, $V$ has a basis.</li>
+	<li>$I \subset \mathscr{B}=\max\{I \subset A \subset S \mid A \text{ is l.i.}\}\subset S$.</li>
+	<li>Any l.i. set in $V$ is contained in a basis.</li>
+	<li>Any spanning set in $V$ contains a basis.</li>
+	<li>For any basis of $V$ has the same cardinality.</li>
+</ul>
+$\dim V_1 +\dim V_2=\dim (V_1+V_2)+\dim(V_1 \cap V_2)$ holds for $V_1 \le V, V_2 \le V$ and cardinality.
+
+$\mathscr{B}_1 \cap \mathscr{B}_2=\emptyset, \mathscr{B}_1 \cup \mathscr{B}_2$ is the basis of $V \Leftrightarrow V=\langle \mathscr{B}_1 \rangle \bigoplus \langle \mathscr{B}_2 \rangle$ 
+
+$\dim(V^{\mathbb{C}}(\mathbb{C}))=\dim(V(\mathbb{R})), V^{\mathbb{C}}(\mathbb{C})=V(\mathbb{R}) \times V(\mathbb{R})$ 
+
+Complexification of $V$, define $+,\cdot$ as in $\mathbb{C}$  $\operatorname{cpx}(\mathscr{B})=\{v_j+0i \mid v_j \in \mathscr{B}\}$ 
+
+<h2>Linear Transformation</h2>
+$\tau \in \mathscr{L}(V,W)$
+<ul>
+	<li>$\tau$ is surjective $\Leftrightarrow \dim(\im(\tau))=\dim(W)$.</li>
+	<li>$\tau$ is injective $\Leftrightarrow \rank(\tau)=\dim(\ker(\tau))=0$.</li>
+	<li>$\dim(V)=\rank(\tau)+\dim(\im(\tau))$.</li>
+	<li>$V(F) \cong W(F) \Leftrightarrow \dim(V)= \dim(W)$</li>
+</ul>
+$\tau \in \mathscr{L}(V,W)$ is an isomorphism, $S \in V$
+<ul>
+	<li>$\langle S \rangle=V \Leftrightarrow \langle \tau S \rangle = W, S$ is l.e. $\Leftrightarrow \tau S$ is l.e.</li>
+	<li>$\tau$ maps a basis to a basis.</li>
+</ul>
+
+<h2>Matrix</h2>
+$U,V,W$ has bases $\mathscr{B}=(b_1, \cdots, b_n), \mathscr{C}=(c_1, \cdots, c_m), \mathscr{A}=(a_1,\cdots,a_l), v \in V, \sigma \in \mathscr{L}(U,V),\tau \in \mathscr{L}(V,W)$ 
+Inverse
+<ul>
+	<li>$[v]_{\tilde{\mathscr{B}}}=M_{\mathscr{B},\tilde{\mathscr{B}}}[v]_{\mathscr{B}}, M_{\mathscr{B},\tilde{\mathscr{B}}}=([b_1]_{\tilde{\mathscr{B}}},\cdots, [b_n]_{\tilde{\mathscr{B}}})$</li>
+	<li>$AB=BA=I_n, A,B \in M_n(F)$</li>
+</ul>
+Multiplication 
+<ul>
+	<li>$[\tau v]_{\mathscr{C}}=[\tau]_{\mathscr{B},\mathscr{C}}[v]_{\mathscr{B}}, [\tau]_{\mathscr{B},\mathscr{C}}=([\tau b_1]_{\mathscr{C}},\cdots, [\tau b_n]_{\mathscr{C}})$</li>
+	<li>$[\tau\sigma]_{\mathscr{A},\mathscr{C}}=[\tau]_{\mathscr{A},\mathscr{B}}[\sigma]_{\mathscr{B},\mathscr{C}}$.</li>
+	<li>$(AB)_{i,j}=\sum\limits_{r=1}^{n}A_{i,r}B_{r,j}, (AB)^{-1}=B^{-1}A^{-1}$.</li>
+</ul>
+Equivalence 
+<ul>
+	<li>$[\tau]_{\tilde{\mathscr{B}},\tilde{\mathscr{C}}}=M_{\mathscr{C},\tilde{\mathscr{C}}} [\tau]_{\mathscr{B},\mathscr{C}} M_{\tilde{\mathscr{B}},\mathscr{B}}$.</li>
+	<li>standard $\begin{bmatrix} I_r & 0 \\ 0 & 0\end{bmatrix}$.</li>
+</ul>
+Similarity 
+<ol>
+	<li>$[\tau]_{\tilde{\mathscr{B}}}=M_{\mathscr{B},\tilde{\mathscr{B}}}[\tau]_{\mathscr{B}}M_{\tilde{\mathscr{B}},\mathscr{B}}$, when $V=W$.</li>
+	<li>Keeps det,rank and trace.</li>
+	<li>$U=V=W,\sigma \sim \tau \Leftrightarrow \exists \mathscr{B}_1,[\tau]_{\mathscr{B}}=[\tau]_{\mathscr{B}_1}$.</li>
+</ol>
+
+<h2>Rank</h2>
+$A \in M_{m \times n}, B \in M_{n \times s}, C \in M_{s \times t}$ 
+<ul>
+	<li>Row rank equals column rank of a matrix.</li>
+	<li>$\rank(A)=r,\exists \rank(X_{m \times r})=\rank(Y_{n \times n})=r,A=BC$.</li>
+	<li>$\rank(AB)=\rank(B) \Rightarrow \forall C,\rank(ABC)=\rank(BC)$.</li>
+	<li>$\rank(A)=\rank(A^T)=\rank(AA^TA)$.</li>
+	<li>$\rank(A+B) \le \rank(A)+\rank(B)$.</li>
+	<li>$\rank(A)+\rank(B)-n \le \rank(AB) \le \min\{\rank(A),\rank(B)\}$.</li>
+	<li>$\rank(ABC)+\rank(B) \ge \rank(AB)+\rank(BC)$.</li>
+</ul>
+
+<h2>Invarient Subspace</h2>
+Depositon $\tau \in \mathscr{L}(V),\tau=\tau|_S \oplus \tau|_T, V=S \oplus T,S,T$ are $\tau$-invarient, i.e., $\tau S \subset S \le V$ 
+
+Projection $V=S \oplus T,\rho \in \mathscr{L}(V)$ 
+<ul>
+	<li>$\rho_{S,T}(s+t)=s,s \in S, t \in T$.</li>
+	<li>$\rho$ is a projection $\Leftrightarrow \rho^2=\rho$(idempotent).</li>
+	<li>$\tau \in \mathscr{L}(V), \tau=\tau|_S \oplus \tau|_T \Leftrightarrow \tau \rho_{S,T}=\rho_{S,T} \tau$.</li>
+	<li>$V=\bigoplus\limits_{i=1}^n V_i,\rho_i=\rho_{V_i,\bigoplus\limits_{j \ne i}V_j},\iota=\rho_1 + \cdots+\rho_n$ is a resolution of identity, where $\rho_i \perp \rho_j, \forall i \ne j$, that is $\rho_i \rho_j=\rho_j \rho_i=0$.</li>
+</ul>
+$\character(F) \ne 2, \rho,\sigma$ are projections 
+<ul>
+	<li>$(\rho+\sigma)^2=\rho+\sigma \Leftrightarrow \rho \perp \sigma$</li>
+	<p><span style="background-color:lightgray;">$\im(\rho+\sigma)=\im(\rho) \oplus \im(\sigma)$</span></p>
+	<p><span style="background-color:lightgray;">$\ker(\rho+\sigma)=\ker(\rho) \cap \ker (\sigma)$</span></p>
+	<li>$(\rho-\sigma)^2=\rho-\sigma \Leftrightarrow \rho \sigma=\sigma\rho=\sigma$</li>
+	<p><span style="background-color:lightgray;">$\im(\rho-\sigma)=\im(\rho) \cap \im(\sigma)$</span></p>
+	<p><span style="background-color:lightgray;">$\ker(\rho+\sigma)=\ker(\rho) \oplus \ker(\sigma)$</span></p>
+	<li>$\rho\sigma=\sigma\rho \Leftarrow (\rho\sigma)^2=\rho\sigma$</li>
+	<p><span style="background-color:lightgray;">$\im(\rho\sigma)=\im(\rho) \cap \im(\sigma)$</span></p>
+	<p><span style="background-color:lightgray;">$\ker(\rho\sigma)=\ker(\rho)+ \ker(\sigma)$.</span></p>
+</ul>
+
+<h2>Isomophism</h2>
+Isomophism Theorems
+<ul>
+	<li>$\tau \in \mathscr{L}(V,W), S \le \ker\tau \Rightarrow \exists\ ! \tau_0 \in \mathscr{L}(V/S,W),\tau_0 \circ \pi_S=\tau, \ker\tau_0 = \ker(\tau /S), \text{im} \tau_0 = \text{im} \tau$</li>
+	<li>$S \le V, T \le V, (S+T)/T \cong S /(S \cap T)$.</li>
+	<li>$S \le T \le V, (V/S)/(T/S) \cong V/T$.</li>
+</ul>
+Linear Functionals: $f \in V^*,f(v) \ne 0 \Rightarrow V=\langle v \rangle \oplus \ker(f)$ 
+<ul>
+	<li>$f,g \in V^*,\ker f=\ker g \Rightarrow f= \lambda g$.</li>
+	<li>$V$ with a basis $\mathscr{B}=\{v_i \mid i \in I\},B^*=\{v_i^* \mid i\in I\}$ is linearly independent, $v_i^*=\delta_{i,j}$.</li>
+	<li>If $\mathscr{B}$ is finite, $\mathscr{B}^*$ is called dual basis of $V$.</li>
+	<li>If $\mathscr{B}$ is infinite, $\dim(V) < \dim(V^*)$.</li>
+	<p><span style="background-color:lightgray;">Take a finite subfield $F$ of $K$ \newline $\dim((K^{\mathscr{B}})_0) = \dim((F^{\mathscr{B}})_0)<\dim(F^{\mathscr{B}}) \le \dim(K^{\mathscr{B}})$ \newline $|(F^{\mathscr{B}})_0|=|\mathscr{B}|<|2^{\mathscr{B}}| \le |F^{\mathscr{B}}|$.</span></p>
+	<li>canonical map $\tau: V \rightarrowtail V^{**}, \tau v=\bar{v},\bar{v}(f)=f(v)$</li>
+	<li>If $V$ is finite-dimensional, $V \cong V^{**}$, thus $V$ is algebraically reflexive.</li>
+</ul>
+</body></html>

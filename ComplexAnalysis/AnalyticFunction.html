@@ -1,0 +1,68 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$']]},messageStyle: "none"});</script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS": { linebreaks: { automatic: true } },SVG: { linebreaks: { automatic: true } }});</script>
+<style> 
+    ol {margin-top: 5px; margin-bottom:5px; margin-left:52px; padding:0px;}
+    ul{margin-top: 5px; margin-bottom:5px; margin-left:38px; padding:0px;}
+    p{margin:1px;padding:0;}
+    h2{margin-top:8px; margin-bottom:8px; padding:0px;}
+    html {font-size: 40px;}</style>
+<title>ComplexAnalysis-Analytic Function</title>
+</head><body>
+    <a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+    <a href="AnalyticFunction.html">Analytic Function</a>
+    <a href="ConformalMapping.html">Conformal Mapping</a>
+<h2>Riemann Sphere</h2>
+<ol>
+	<li>Stereographic projection: $N(0,0,1), S(0,0,-1)$, equator $x^2+y^2=1,z=0$.</li>
+	<li>$\xi=\dfrac{x+iy}{1-z}, (x,y,z)=\left(\dfrac{2\mathrm{Re} \xi}{1+\xi\overline{\xi}}, \dfrac{2\mathrm{Im} \xi}{1+\xi\overline{\xi}}, \dfrac{-1+ \xi\overline{\xi}}{1+\xi\overline{\xi}}\right)$.</li>
+	<li>Maps circle to circle and is conformal.</li>
+	<li>$d(\xi_1,\xi_2)=\dfrac{2|\xi_1-\xi_2|}{(1+\xi_1^2)(1+\xi_2^2)}$.</li>
+	<li>Riemann sphere: $\mathbb{C}\cup \{\infty\},\text{with transition mapping }f(z)={\dfrac {1}{z}}$.</li>
+</ol>
+<h2>Holomorphic</h2>
+<ul>
+	<li>Partial derivative: $\dfrac{\partial}{\partial z} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} - i\dfrac{\partial}{\partial y}\right), \dfrac{\partial}{\partial \bar{z}} = \dfrac{1}{2}\left(\dfrac{\partial}{\partial x} + i\dfrac{\partial}{\partial y}\right)$.</li>
+	<li>$\dfrac{\partial \bar{f}}{\partial z} = \overline{\left(\dfrac{\partial f}{\partial {\bar {z}}}\right)},\dfrac{\partial \bar{f}}{\partial \bar{z}} = \overline{\left(\dfrac{\partial f}{\partial {z}}\right)}$.</li>
+	<li>Derivative: $f^{\prime}(z_0)=\lim\limits _{z\to z_{0}}\dfrac{f(z)-f(z_0)}{z-z_0}=\dfrac{\partial u}{\partial x}+i\dfrac{\partial v}{\partial x}=\dfrac{\partial v}{\partial y}-i\dfrac{\partial u}{\partial y}$.</li>
+	<li>Holomorphic on $z_0$ if $f$ is derivable on $U(z_0)$, on a region $\Omega$ if $f$ is derivable everywhere in $\Omega$ and is entire if $f$ is derivative on $\mathbb{C}$.</li>
+    <li>Cauchy-Riemann equation: $f(z) \in \text{Hol}(\Omega) \Leftrightarrow \begin{cases}u,v \text{ is differentiable on } \Omega \\ \dfrac{\partial u}{\partial x}=\dfrac{\partial v}{\partial y},\dfrac{\partial v}{\partial x}=-\dfrac{\partial u}{\partial y}\end{cases} \Rightarrow \dfrac{\partial f}{\partial\bar{z}}=0$.</li>
+    <li>Harmonic: $\Delta u(x,y)=\Delta v(x,y)=0,\text{conjugate } \dfrac{\partial u}{\partial x}=\dfrac{\partial v}{\partial y},\dfrac{\partial v}{\partial x}=-\dfrac{\partial u}{\partial y}$</li>
+    <li>$\begin{cases}f(z) \in \text{Hol}(\Omega) \\ u,v \in C^2(\Omega)\end{cases} \Rightarrow \begin{cases}\Delta u=\Delta v=0 \\ f^{\prime}(z) \in \text{Hol}(\Omega)\end{cases}$.</li>
+	<li>$\Omega \subset \mathbb{C}$ is a simply connected region,</li>
+	<p><span style="background-color:lightgray;">Harmonic function: $u(x,y)$ on $\Omega$ has a unique conjugate harmonic function up to a constant.</span></p>
+	<p><span style="background-color:lightgray;">$\displaystyle{v(x,y)= \int_{\gamma}\left(\dfrac{\partial u}{\partial x}\mathrm{d}y-\dfrac{\partial u}{\partial y}\mathrm{d}x\right)}$.</span></p>
+	<li>$f(z) \in \text{Hol}(\Omega) \cap C^2(\Omega)$ $\Rightarrow \exists g(z), h(z) \in \text{Hol}(\Omega),\mathrm{e}^{g(z)}=h^n(z)=f(z), n \in \mathbb{N}$.</li>
+</ul>
+<h2>Integration along curves</h2>
+Given a smooth curve $\gamma$ in $\mathbb{C}$ parametrized by $z:[a, b] \to \mathbb{C}$, and $f \in C^0 (\gamma)$
+<ul>
+	<li>$\displaystyle{\int_{\gamma}f(z)\mathrm{d}z:=\int_a^b f(z(t))z^{\prime}(t)\mathrm{d}t}, \displaystyle{\int_{\gamma^-}f(z) \mathrm{d}z=-\int_{\gamma}f(z)\mathrm{d}z}$</li>
+	<li>$\displaystyle{\mathrm{length}(\gamma)=\int_a^b |z^{\prime}(t)| \mathrm{d}t}, \displaystyle{\left| \int_{\gamma}f(z)\mathrm{d}z\right| \le \sup_{z \in \gamma}|f(z)|\cdot \mathrm{length}(\gamma)}$.</li>
+	<li>$F^{\prime}(z)=f(z) \text{ in } \Omega \Rightarrow \displaystyle{\int_{\gamma}f(z)\mathrm{d}z =F(z(b))-F(z(a))}$.</li>
+	<li>If $\{f_n(z) \in C^0\} \rightrightarrows f(z)$ on $\gamma$, then $f(z) \in C^0, \displaystyle{\lim\limits_{n \to \infty}\int_{\gamma}f_n(z)\mathrm{d}z=\int_{\gamma}f(z)\mathrm{d}z}$.</li>
+</ul>
+<h2>Cauchy's Theorem</h2>
+$\Omega$ is a bounded region with a smooth boundary
+<ul>
+	<li>$f(z) \in C^1(\bar{\Omega}), \displaystyle{\int_{\partial \Omega}f(z)\mathrm{d}z}= \displaystyle{\iint\limits_{\Omega}\dfrac{\partial f}{\partial \bar{z}}2i \mathrm{d}x\mathrm{d}y=-\iint\limits_{\Omega}\dfrac{\partial f}{\partial \bar{z}}\mathrm{d}z\land \mathrm{d}\bar{z}}$.</li>
+	<li>Lemma: $D \in \mathbb{C} \text{ is a triangle region, } f(z) \in \text{Hol}(\bar{D}) \Rightarrow \displaystyle{\int_{\partial D}f(z)\mathrm{d}z=0}$.</li>
+	<li>$f(z) \in C^0(\bar{\Omega})\cap \text{Hol}(\Omega) \Rightarrow \displaystyle{\int_{\partial \Omega}f(z)\mathrm{d}z=0}$</li>
+	<li>$f(z) \in C^0(\bar{\Omega})\cap \text{Hol}(\Omega) , z_0 \in \Omega, z \in D(z_0,r) \subset \Omega$.</li>
+	<li>$\Rightarrow  f(z)=\displaystyle{\dfrac{1}{2 \pi i}\int_{\partial \Omega}\dfrac{f(\omega) \mathrm{d}\omega}{(\omega-z)}=\sum\limits_{n=0}^{+\infty}\dfrac{1}{2\pi i}\int_{\partial \Omega}\dfrac{f(\omega) \mathrm{d}\omega}{(\omega-z_0)^{n+1}} (z-z_0)^n}$</li>
+	<li>$\Rightarrow \displaystyle{ f(z_0)=\dfrac{1}{2 \pi} \int_{0}^{2 \pi}f(z_0 + re^{i \theta}) \mathrm{d}\theta=\dfrac{1}{\pi r^2}\iint_{D(z_0,r)}f(z)\mathrm{d}S}$</li>
+	<li>Cauchy: $f(z) \in \text{Hol}(\Omega),z_0 \in \Omega \Rightarrow |f^{(n)}(z_0)| \le \dfrac{n!\sup\limits_{z \in \Omega}\{|f(z)|\}}{(dist(z_0,\partial \Omega))^n}$</li>
+	<li>Liouville: $f(z) \in \text{Hol}(\mathbb{C}) \text{ is bounded} \Rightarrow f(z) \equiv C$.</li>
+	<li>Weierstrass: $f(z) \in \text{Hol}(\mathbb{C}) \ne C,\overline{f(\mathbb{C})}\supset \mathbb{C}$.</li>
+	<li>Picard</li>
+</ul>
+<h2>Analytic Function</h2>
+<ul>
+    <li>Prop. $f(z) \in \text{Hol}(\Omega) \Rightarrow f(z) \in C^{\omega}(\Omega) \Rightarrow u,v \in C^{\omega}(\Omega)$.</li>
+	<li>Morera: $\Omega$ is a region, $f(z) \in C^0(\Omega)$, $f(z) \in C^{\omega}(\Omega) \Leftrightarrow \forall$ bounded region $D$ with smooth boundary, $\bar{D} \subset \Omega, \displaystyle{\int_{\partial D}f(z)\mathrm{d}z}=0$</li>
+	<li>Lemma: $D$ is a simply connected region, $f(z) \in \text{Hol}(D),\exists F^{\prime}(z)=f(z)$.</li>
+	<li>Lemma: $\Omega$ has $n$ holes, there are $n$ analytic functions without primitives.</li>
+	<li>Theorem: $\{f_n(z) \in \text{Hol}(\Omega)\}$ internally closed $\rightrightarrows f(z) \Rightarrow f(z) \in \text{Hol}(\Omega)$.</li>
+</ul>
+</body></html>

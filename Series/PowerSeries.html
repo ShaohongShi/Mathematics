@@ -1,0 +1,59 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+    ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+    p{margin:1px;padding:0;}
+    html {font-size: 28px;}</style>
+<title>Foundation-Axioms</title>
+</head><body>
+    <a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+    <a href="NumericalSeries.html">Numerical Series</a>
+    <a href="PowerSeries.html">Power Series</a>
+<h2>Definition</h2>
+<ul>
+    <li>Ascoli: $\{f_n(x) \in \mathbb{R},x \in [a,b]\}_{n \in \mathbb{N}}$ is uniformly bounded and equicontinuous, then there exists a subsequence that converges uniformly.</li>
+    <li>Power series: $f(z) =  \sum\limits_{n=0}^\infty a_n (z-z_0)^n, z_0 \in \mathbb{C}$.</li>
+    <li>Radius of convergence: $r:=\sup {\{|z-z_0| \big| f(z) \text{ converges }\}}=\dfrac{1}{\mathop{\overline{\lim}}\limits_{n \to \infty}\sqrt[n]{a_n}}$</li>
+    <li>Abel: $f(z)$ converges at $z^* \Rightarrow f(z)$ converges absolutely at $\forall |z-z_0|<|z^*- z_0|$.</li>
+    <li>Analytic: $f^{\prime}(z)=\sum\limits_{n=1}^{\infty}na_n(z-z_0)^n$ with the same radius of convergence.</li>
+</ul>
+<h2>Maclaurin Formula</h2>
+<ul>
+    <li>$\mathrm{e}^x=\sum\limits_{i=0}^n\dfrac{x^i}{i!}+o\left(x^n\right)$.</li>
+    <li>$\sin x=\sum\limits_{i=1}^n {(-1)}^{i-1}\dfrac{x^{2i-1}}{(2i-1)!}+o(x^{2n})$.</li>
+    <li>$\cos x=\sum\limits_{i=0}^n{(-1)}^i\dfrac{x^{2i}}{(2i)!}+o(x^{2n})$.</li>
+    <li>$\arcsin x=\sum\limits_{i=0}^n \dfrac{{[(2i-1)!!]}^2 x^{2i+1}}{(2i+1)!}+o(x^n)$.</li>
+    <li>$\ln{(1+x)}=\sum\limits_{i=1}^n\dfrac{{(-1)}^{i-1}x^i}{i}+o(x^n)$.</li>
+</ul>
+<h2>Integral Remaider</h2>
+<ul>
+$f$ is defined for $U(x_0,\delta)$ and has its first $n$ derivatives on the closed interval with $x_0$ and $x$. $f(x)-\sum\limits _{i=0}^n{\dfrac {f^{(n)}(x_0)}{n!}}(x-x_0)^{n}=\dfrac{1}{n!}\int_{x_0}^x f^{(n+1)}(t){(x-t)}^ndt$. If $f$ has a derivative of order $n+1$ at the interior points of $I$, then for any function $\phi$ that is continuous on this closed interval and has a nonzero derivative at its interior points, $\xi$ between $x$ and $x_0$ such that $R_n(x)=\dfrac{\phi(x)-\phi(x_0)}{\phi^{\prime}(\xi)n!}f^{(n+1)}(\xi)(x-\xi)^n=$.
+    <li>Cauchy remaider: $\phi(t)=x-t$, $R_n(x)=\dfrac{(x-x_0)(x-\xi)^n}{n!} f^{(n+1)}(\xi)$.</li>
+    <li>Lagrange remaider: $\phi(t)=(x-t)^{n+1}$, $R_n(x)=\dfrac{(x-x_0)^{n+1}}{(n+1)!}f^{(n+1)}(\xi)$.</li>
+</ul>
+<h2>Higher Derivative</h2>
+<ol>
+    <li>Elementary function</li>
+    <li>Leibniz formula: $(u \cdot v)^{(n)}=\sum\limits_{k=0}^{n}C_n^k u^{(k)}v^{(n-k)}$.</li>
+    <li>Euler number
+        <ul>
+            <li>$\mathrm{sech} x=\sum\limits_{k=0}^n\dfrac{E_{2k}}{(2k)!}x^{2k}+o(x^{2n+1})$.</li>
+            <li>$E_0=1,E_2=-1,E_4=5,E_6=-61$.</li>
+            <li>$E_{2n}+\left(\begin{array}{cc}2n \\2\end{array}\right)E_{2n-2}+\left(\begin{array}{cc}2n \\4\end{array}\right)E_{2n-4}+\cdots{}+E_0=0$.</li>
+            <li>$\sec x=\sum_{k=0}^n{(-1)}^k\frac{E_{2k}}{\left(2k\right)!}x^{2k}+o\left(x^{2n+1}\right)$.</li>
+        </ul></li>
+    <li>Bernoulli number
+    	$f(x)=\left\{\begin{array}{l}\frac{x}{e^x-1},x\not=1 \\
+1 ,x=1\end{array}\right.=\sum_{i=0}^n\frac{B_ix^i}{i!}+o(x^n)$
+$B_0=1,B_1=-\frac{1}{2} ,B_2=\frac{1}{6},B_4=-\frac{1}{30}$
+$\left(\begin{array}{cc}n \\0\end{array}\right)B_0+{\left(\begin{array}{
+cc}n \\1\end{array}\right)}B_1+{\left(\begin{array}{cc}n \\2\end{array}\right)}B_2+\cdots{}+{\left(\begin{array}{cc}n \\n-1\end{array}\right)}B_{n-1}=0$
+$x\cot x=1-\frac{1}{3}x^2-\frac{1}{45}x^4-\frac{2}{945}x^6+O\left(x^8\right)$
+$\tan x=x+\frac{1}{3}x^3+\frac{2}{15}x^5+\frac{17}{315}x^7+O\left(x^9\right)$</li>
+</ol>
+</body></html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$', '$']]},messageStyle: "none"});</script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS": { linebreaks: { automatic: true } },SVG: { linebreaks: { automatic: true } }});</script>
+<style> 
+    ol {margin-top: 5px; margin-bottom:5px; margin-left:52px; padding:0px;}
+    ul{margin-top: 5px; margin-bottom:5px; margin-left:38px; padding:0px;}
+    p{margin:1px;padding:0;}
+    h3{margin-top:8px; margin-bottom:8px; padding:0px;}
+    html {font-size: 40px;}
+    tr,td {font-size: 40px;}
+    td {text-align: center;}
+</style>
+<title>Foundation-Others</title>
+</head><body>
+	<a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+	<a href="Axioms.html">Axioms</a>
+    <a href="MapRelation.html">Map Relation</a>
+    <a href="Cardinality.html">Cardinality</a>
+    <a href="SymbolsAlgebra.html">Symbols in Algebra</a>
+    <a href="SymbolsTopology.html">Symbols in Topology</a>
+    <a href="SymbolsAnalysis.html">Symbols in Analysis</a>
+    <a href="Others.html">Others</a>
+<h3>Constants</h3>
+<ul>
+	<li>Arithematic</li>
+<table align="center">
+<tr> <td>&nbsp&nbsp C &nbsp&nbsp</td> <td>2</td> <td>3</td> <td>5</td> <td>10</td></tr> 
+<tr> <td>$\sqrt{}$</td> <td>&nbsp&nbsp 1.4142 &nbsp&nbsp</td> <td>&nbsp&nbsp 1.7320 &nbsp&nbsp</td> <td>&nbsp&nbsp 2.2360 &nbsp&nbsp</td> <td>&nbsp&nbsp 3.1623 &nbsp&nbsp</td></tr>
+<tr> <td>$\sqrt[3]{}$</td> <td>1.2599</td> <td>1.4422</td> <td>1.7100</td> <td>2.1544</td></tr>
+<tr> <td>$\ln$</td> <td>0.6931</td> <td>1.0986</td> <td>1.6094</td> <td>2.3026</td></tr>
+</table>
+	<li>Natural Logrithim</li>
+	$$e = \lim\limits_{n \to \infty}\left(1+\dfrac{1}{n}\right)^n = \lim\limits_{n \to \infty}\left(1+\dfrac{1}{n}\right)^{n+1} \approx 2.71828 \, .$$
+	$$\dfrac{1}{(n+1)!}+\sum\limits_{k=0}^n\dfrac{1}{k!} < e = \sum\limits_{n=0}^{\infty}\dfrac{1}{n!} < \dfrac{1}{n!n}+\sum\limits_{k=0}^n\dfrac{1}{k!} \, .$$
+	$$\gamma=\lim\limits_{n \to \infty}{(1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}-\ln{n})}\approx 0.5772 \, .$$
+	<li>Standard Normal Distribution</li> 
+<table align="center">
+<tr> <td>&nbsp 0.50 &nbsp</td> <td>&nbsp 0.95 &nbsp</td> <td>&nbsp 0.99 &nbsp</td> <td>&nbsp 0.6827 &nbsp</td> <td>&nbsp 0.9545 &nbsp</td> <td>&nbsp 0.9973 &nbsp</td></tr>
+<tr> <td>0.674</td> <td>1.96</td> <td>2.576</td> <td>$\sigma$</td> <td>$2\sigma$</td> <td>$3\sigma$</td></tr>
+</table>
+</ul>
+<h3>Functions</h3>
+<ul>
+	<li>Riemann $R(x)=\left\{ \begin{array}{ll}{\dfrac{p}{q}} & \text{$x=\dfrac{p}{q},q,p \in \mathbb{N} $} \\ 0 & \text{$x$ is irrational}\end{array} \right.$</li>
+	<li>Dirichlet $D(x)=\begin{cases}{1} & \text{$x$ is rational} \\ 0 & x \text{ is irrational}\end{cases}$</li>
+	<p><span style="background-color:lightgray;">Dirichlet function is nowhere continuous.</span></p>
+	<li>Smooth but not analytic $f(x)= \begin{cases}\mathrm{e}^{-\frac{1}{t}} & \text{if } t > 0 \\ 0 & \text{if } t \le 0 \end{cases}$</li>
+	<li>Kronecker $\delta$ $\delta_{i,j}=\begin{cases}1 & i=j \\ 0 & i \ne j\end{cases}$</li>
+	<li>Characteristic $\chi_A(x)=\left\{ \begin{array}{ll}1 & \text{$x \in A$} \\ 0 & \text{$x\notin A$}\end{array} \right.,A \subset X$</li>
+</ul>
+<h3>Trigonometry</h3>
+<ul>
+	<li>Euler Formula</li>
+		$$e^{iz}=\cos z+i \sin z \, .$$
+		$$\sin z= \sin x\cosh y+i \cos x \sinh y \, .$$
+		$$\cos z =\cos x \cosh y-i\sin x\sinh y \, .$$
+	<li>Basic</li>
+		$$\sin^2 x+\cos^2 x=\sec^2 x-\tan^2 x=\csc^2 x- \cot^2 x=1 \, .$$
+		$$\sin(-x)=-\sin x, \cos (-x)=\cos x, \tan (-x)=-\tan x \, .$$
+	<li>Sum and Minus</li>
+		$$\sin (x \pm y)=\sin x\cos y \pm \cos x \sin y \, .$$
+		$$\cos (x \pm y)=\cos x \cos y \mp \sin x \sin y \, .$$
+		$$\tan (x \pm y)=\dfrac{\tan x \pm \tan y}{1 \mp \tan x \tan y} \, .$$
+	<li>Multiply</li>
+		$$\sin 3x = 3\sin x-4 \sin ^3 x, \cos 3x=4\cos^3 x-3\cos x \, .$$
+		$$\sin^2 x = \dfrac{1-\cos 2x}{2}, \cos^2 x=\dfrac{1+\cos 2x}{2} \, .$$
+		$$\tan x = \dfrac{\sin 2x}{1 + \cos 2x}=\dfrac{1 - \cos 2x}{\sin 2x} \, .$$
+		$$\sin x=\dfrac{2t}{1+t^2}\, , \cos x=\dfrac{1-t^2}{1+t^2}\, ,$$
+		$$\mathrm{d}x=\dfrac{2\mathrm{d}t}{1+t^2}\, , t=\tan \dfrac{x}{2} \, .$$
+	<li>Sum to Product</li>
+		$$\sin x +\sin y= 2 \sin \dfrac{x+y}{2} \cos \dfrac{x-y}{2} \, .$$
+		$$\sin x -\sin y= 2 \cos \dfrac{x+y}{2} \sin \dfrac{x-y}{2} \, .$$
+		$$\cos x +\cos y= 2 \cos \dfrac{x+y}{2} \cos \dfrac{x-y}{2} \, .$$
+		$$\cos x -\cos y= -2 \sin \dfrac{x+y}{2} \sin \dfrac{x-y}{2} \, .$$
+	<li>Series</li>
+		$$\sum\limits_{k=1}^{n}\sin k=\dfrac{1-\cos (n+1)}{2 \sin 1} \, .$$
+		$$\prod\limits_{k=1}^{n}\cos \dfrac{x}{2^k}=\dfrac{\sin x}{2^n \sin \dfrac{x}{2^n}} \, .$$
+		$$\sum\limits_{k=1}^{n}\dfrac{1}{2^k}\tan \dfrac{x}{2^k}=\dfrac{1}{2^n}\cot \dfrac{x}{2^n}-\cot x \, .$$
+</ul>
+</body></html>

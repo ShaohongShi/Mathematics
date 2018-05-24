@@ -1,0 +1,53 @@
+<!DOCTYPE html5><html><head>
+<script type="text/javascript"src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$']]},
+        messageStyle: "none"
+    });</script>
+<style> 
+    ol {margin-top: 8px; margin-left: 42px;padding:0px;}
+    p{margin:1px;padding:0;}
+    html {font-size: 28px;}</style>
+<title>Foundation-Axioms</title>
+</head><body>
+    <a href="http://shaohongshi.github.io/Mathematics/">Index</a>
+    <a href="ProbabilitySpace.html">Probability Space</a>
+    <a href="NumericalCharacteristics.html">Numerical Characteristics</a>
+    <a href="DiscreteDistribution.html">Discrete Distribution</a>
+    <a href="ContinuousDistribution.html">Continuous Distribution</a>
+    <a href="StaticsModel.html">Statics Model</a>
+    <p><span style="background-color:lightgray;">
+<h2>Mathematical Expectation</h2>
+<ul>
+    <li>$EX=\displaystyle{\int_{-\infty}^{+\infty}x\mathrm{d}F(x)}$ if $\displaystyle{\int_{-\infty}^{+\infty}|x|\mathrm{d}F(x)}$ exists.
+    <li>Discrete: $EX=\sum\limits_{i=1}^n x_i p_i$ if $\sum\limits_{i=1}^n |x_i| p_i$ exists.</li>
+    <li>Continuous: $EX=\displaystyle{\int_{-\infty}^{+\infty}xf(x)\mathrm{d}x}$ if $\displaystyle{\int_{-infty}^{+\infty}|x|f(x)\mathrm{d}x}$ exists.</li>
+    <li>$E\chi_A=P(A)$.</li>
+    <li>If $Y=g(X)$, which is Borel measurable, $\displaystyle{\int_{-\infty}^{+\infty}y\mathrm{d}F_Y(y)}=\displaystyle{\int_{-infty}^{+\infty}g(x)\mathrm{d}F_X(x)}$.</li>
+    <li>$E(X_1,\cdots,X_n) = (EX_1,\cdots,EX_n), EX_i=\displaystyle{\int_{-\infty}^{+\infty}x_i\mathrm{d}F_i(x_i)}$.</li>
+    <li>If $a \le X \le b$, then $a \le EX \le b$.</li>
+    <li>Linear: $E(aX+b)=aEX+b$.</li>
+</ul>
+<h2>Variance</h2>
+<ul>
+    <li>Variance: $\operatorname{var}(X)=E(X-EX)^2$ if it exists. And $\sqrt{\operatorname{var}(X)}$ is called standard deviation.</li>
+    <li>$\operatorname{var}(X)=EX^2-(EX)^2, \operatorname{var}c=0, \operatorname{var}(aX+b)=a^2\operatorname{var}(X)$.</li>
+    <li>Standardization： $X^{*}=\dfrac{X-EX}{\operatorname{var}(X)}, EX^*=0, \operatorname{var}(X^*)=1$.</li>
+    <li>If $c \ne EX$, then $\operatorname{var}(X) < E(X-c)^2$.</li>
+</ul>
+<h2>Correlation coefficient</h2>
+<ul>
+    <li>$\sigma_{ij}=\operatorname{cov}(X_i,X_j)=E[(X_i-EX_i)(X_j-EX_j)], \rho_ij=\dfrac{\operatorname{cov}(X_i,X_j)}{\sqrt{\operatorname{var}(X_i)\operatorname{var}(X_j)}}$.</li>
+    <li>$\Sigma=(\sigma_{ij})_{n \times n}$ is a positive-semidefinite symmetric martix.</li>
+    <li>$\rho_{ij} \in [-1,1]$.</li>
+    <li>$\operatorname{cov}(X,Y)=0 \Leftrightarrow EXY=EXEY \Leftrightarrow \operatorname{var}(X+Y)=\operatorname{var}(X)+\operatorname{var}(Y)$.</li>
+    <li>If $X,Y$ are independent, then they are not relative. The inverse is not true.</li>
+</ul>
+<h2>Inequalities</h2>
+<ul>
+    <li>Markov: $P(|X|>\varepsilon) \le \dfrac{E|X|^{\alpha}}{\varepsilon^{\alpha}}, \alpha >0$.</li>
+    <li>Chebyshev: $P(|X-EX|>\varepsilon) \le \dfrac{\operatorname{var}(X)}{\varepsilon^2}, \operatorname{var}(X)=0 \Rightarrow X=c$.</li>
+    <li>Cauchy: If $EX^2,EY^2$ exists, then $E|XY| \le \sqrt{EX^2EY^2}$, equality holds iff $\exists a, b, a^2+b^2 \ne 0, aX+bY \overset{a.s.}{=} 0$.</li>
+</ul>
+</body></html>
